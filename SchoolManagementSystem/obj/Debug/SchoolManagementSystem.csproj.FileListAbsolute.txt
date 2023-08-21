@@ -1,0 +1,41 @@
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.pdb
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\Home.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\App.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem_MarkupCompile.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem_MarkupCompile.lref
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\Home.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.g.resources
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Properties.Resources.resources
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.GenerateResource.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\ResourceDictionaries\Colors.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\FontAwesome.WPF.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\FontAwesome.WPF.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CopyComplete
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\ResourceDictionaries\ButtonStyles.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\App.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\MenuUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\MenuUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\AddStaffUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\AddStudentUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\AddTeacherUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\ReportUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchStudentUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchTeacherUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SettingsUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\AddStaffUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\AddStudentUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\AddTeacherUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\ReportUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchStudentUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchTeacherUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SettingsUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchStaffUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchStaffUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\ResourceDictionaries\GlobalStyles.baml
