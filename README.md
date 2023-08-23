@@ -4,3 +4,5 @@ Consist of Functionality of Adding Students, Teachers and Staff.
 Searching and Finding Students, Teachers and Staff.
 And Removing Students, Teachers and Staff.
 Other Settings are also added like Changing the theme to Dark and Reporting a problem to the Manufacturer.
+
+FontAwesome for WPF plugin needs to be installed to initiate some icons used in the project.
