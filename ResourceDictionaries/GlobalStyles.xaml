@@ -79,14 +79,14 @@
                                 <RemoveStoryboard BeginStoryboardName="leftt"></RemoveStoryboard>
                                 <BeginStoryboard Storyboard="{StaticResource right}" x:Name="rightt" ></BeginStoryboard>
                             </Trigger.ExitActions>
-                            <Setter TargetName="button" Property="Background" Value="#757575"></Setter>
+                            <Setter TargetName="button" Property="Background" Value="#FFFFFF"></Setter>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="true">
                             <Trigger.ExitActions>
                                 <RemoveStoryboard BeginStoryboardName="rightt"></RemoveStoryboard>
                                 <BeginStoryboard Storyboard="{StaticResource left}" x:Name="leftt" ></BeginStoryboard>
                             </Trigger.ExitActions>
-                            <Setter TargetName="button" Property="Background" Value="#20BF55"></Setter>
+                            <Setter TargetName="button" Property="Background" Value="#000000"></Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
