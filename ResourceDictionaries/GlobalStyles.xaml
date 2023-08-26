@@ -51,9 +51,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="CheckBox">
                     <StackPanel Orientation="Horizontal">
-                        <Grid >
+                        <Grid>
                             <Border Width="45" Height="20" Background="LightGray" CornerRadius="10" Margin="5,0"></Border>
-                            <Border x:Name="button" Height="25" Width="25" CornerRadius="12.5" HorizontalAlignment="Left"  ></Border>
+                            <Border x:Name="button" Height="25" Width="25" CornerRadius="12.5" HorizontalAlignment="Left">
+                                <TextBlock x:Name="icon" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
                         </Grid>
                         <ContentPresenter x:Name="content" Margin="10,0,0,0" Content="{TemplateBinding Content}" VerticalAlignment="Center"/>
                     </StackPanel>
@@ -79,7 +81,9 @@
                                 <RemoveStoryboard BeginStoryboardName="leftt"></RemoveStoryboard>
                                 <BeginStoryboard Storyboard="{StaticResource right}" x:Name="rightt" ></BeginStoryboard>
                             </Trigger.ExitActions>
-                            <Setter TargetName="button" Property="Background" Value="#FFFFFF"></Setter>
+                            <Setter TargetName="button" Property="Background" Value="#FFFFFF"/>
+                            <Setter TargetName="icon" Property="Text" Value="🌞"/>
+                            <Setter TargetName="icon" Property="Foreground" Value="Orange"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="true">
                             <Trigger.ExitActions>
@@ -87,8 +91,10 @@
                                 <BeginStoryboard Storyboard="{StaticResource left}" x:Name="leftt" ></BeginStoryboard>
                             </Trigger.ExitActions>
                             <Setter TargetName="button" Property="Background" Value="#000000"></Setter>
+                            <Setter TargetName="icon" Property="Text" Value="🌙"/>
+                            <Setter TargetName="icon" Property="Foreground" Value="White"/>
                         </Trigger>
-                    </ControlTemplate.Triggers>
+                    </ControlTemplate.Triggers> 
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
