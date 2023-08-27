@@ -11,10 +11,15 @@
             <RowDefinition Height="Auto"/>
             <!-- Row for Label and CheckBox -->
         </Grid.RowDefinitions>
-
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Label Content="Theme" FontWeight="Bold" Margin="0,30,150,0"/>
-            <CheckBox FontSize="26" Margin="0,30,0,0"/>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Theme" FontWeight="Bold" Margin="0,30,190,0"/>
+                <CheckBox FontSize="26" Margin="0,30,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Font Size" FontWeight="Bold" Margin="0,20,30,0"/>
+                <Slider Width="200" Height="22" Minimum="20" Maximum="40" Value="22" Margin="0,20,0,0"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 
