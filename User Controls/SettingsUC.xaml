@@ -18,7 +18,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label Content="Font Size" FontWeight="Bold" Margin="0,20,30,0"/>
-                <Slider Width="200" Height="22" Minimum="20" Maximum="40" Value="22" Margin="0,20,0,0"/>
+                <Slider Width="200" Height="22" Minimum="20" Maximum="40" Value="22" Margin="0,20,0,0"  IsSnapToTickEnabled="True" TickFrequency="1"/>
             </StackPanel>
         </StackPanel>
     </Grid>
