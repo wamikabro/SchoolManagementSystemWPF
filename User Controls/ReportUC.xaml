@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <TextBlock Text="Report the issue you are facing to the manufacturer." Margin="10,0,0,0"/>
+            <Label Content="Report the issue you are facing to the manufacturer." HorizontalAlignment="Left" Margin="10,10,0,0"/>
             <Label Content="Subject" HorizontalAlignment="Left" Margin="10,20,0,0"/>
             <TextBox Width="750" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
             <Label Content="Issue" HorizontalAlignment="Left" Margin="10,20,0,0"/>
