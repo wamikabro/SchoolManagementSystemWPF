@@ -94,14 +94,9 @@
                             <Setter TargetName="icon" Property="Text" Value="🌙"/>
                             <Setter TargetName="icon" Property="Foreground" Value="White"/>
                         </Trigger>
-                    </ControlTemplate.Triggers> 
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
-
-    <Style TargetType="TextBlock">
-        <Setter Property="FontSize" Value="22"/>
-        <Setter Property="Foreground" Value="White"/>
     </Style>
 </ResourceDictionary>
