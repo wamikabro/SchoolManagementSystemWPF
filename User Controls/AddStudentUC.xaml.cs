@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -27,6 +28,32 @@ namespace SchoolManagementSystem.User_Controls
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
+            // Fetching the selections
+            String firstName = FirstNameTextBox.Text;
+            String lastName = LastNameTextBox.Text;
+            String fatherName = FatherNameTextBox.Text;
+            String gender = GenderComboBox.Text;
+            int grade = int.Parse(GradeComboBox.Text);
+            String phoneNumber = PhoneNumberTextBox.Text;
+            String email = EmailTextBox.Text;
+            String bloodGroup = BloodGroupComboBox.Text;
+            String address = AddressTextBox.Text;
+            String guardianName = GuardianNameTextBox.Text;
+            DateTime dateOfBirth = (DateTime) DOBDatePicker.SelectedDate;
+            DateTime dateOfAdmissions = (DateTime) DOADatePicker.SelectedDate;
+
+            /*MessageBox.Show(firstName + "\n" 
+                + lastName + "\n"
+                + fatherName + "\n"
+                + gender + "\n"
+                + grade + "\n"
+                + phoneNumber + "\n"
+                + email + "\n"
+                + bloodGroup + "\n"
+                + address + "\n"
+                + guardianName + "\n"
+                + dateOfBirth + "\n"
+                + dateOfAdmissions + "\n");*/
 
         }
 
@@ -34,5 +61,6 @@ namespace SchoolManagementSystem.User_Controls
         {
 
         }
+
     }
 }
