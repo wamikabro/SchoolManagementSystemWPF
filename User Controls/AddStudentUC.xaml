@@ -97,7 +97,7 @@
                 </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20">
-                <Button Content="Submit" Margin="0 10 5 0"/>
+                <Button x:Name="Submit" Content="Submit" Margin="0 10 5 0" Click="SubmitButton_Click"/>
                 <Button Content="Reset"  Margin="5 10 0 0"/>
             </StackPanel>
         </StackPanel>
