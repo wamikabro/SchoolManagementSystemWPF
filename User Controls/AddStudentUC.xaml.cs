@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+
 namespace SchoolManagementSystem.User_Controls
 {
     /// <summary>
@@ -26,6 +28,7 @@ namespace SchoolManagementSystem.User_Controls
             DOADatePicker.SelectedDate = DateTime.Today;
         }
 
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             // Fetching the selections
