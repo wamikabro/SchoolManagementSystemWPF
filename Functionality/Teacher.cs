@@ -7,7 +7,7 @@ using SchoolManagementSystem.Functionality.Enums;
 
 namespace SchoolManagementSystem.Functionality
 {
-    internal class Teacher : Person
+    public class Teacher : Person
     {
         // Own Attributes
         private string subject;

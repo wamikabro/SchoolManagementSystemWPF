@@ -7,7 +7,7 @@ using SchoolManagementSystem.Functionality.Enums;
 
 namespace SchoolManagementSystem.Functionality
 {
-    abstract internal class Person
+    abstract public class Person
     {
         // All these values will be used by Student and Teacher Object
         protected string firstName;
