@@ -10,7 +10,6 @@ namespace SchoolManagementSystem.Functionality
     abstract internal class Person
     {
         // All these values will be used by Student and Teacher Object
-        private static int identity = 0;
         protected string firstName;
         protected string lastName;
         protected string fatherName;
@@ -201,9 +200,6 @@ namespace SchoolManagementSystem.Functionality
             set => dateOfAdmissions = value;
         }
 
-        public static int Identity { get => identity; set => identity = value; }
-
-
         /* Normally during submitting the data, it will be checked if the 
             data given is filled, otherwise the exception will be thrown
             so default constructor will never be called*/
@@ -226,7 +222,6 @@ namespace SchoolManagementSystem.Functionality
             this.bloodGroup = bloodGroup;
             DateOfBirth = dateOfBirth;
             DateOfAdmissions = dateOfAdmissions;
-            Identity = Identity++;
         }
         /* // Other Constructors
         
@@ -281,7 +276,6 @@ namespace SchoolManagementSystem.Functionality
             this.bloodGroup = bloodGroup;
             DateOfBirth = dateOfBirth;
             DateOfAdmissions = dateOfAdmissions;
-            Identity = Identity++;
         }
     }
 }
