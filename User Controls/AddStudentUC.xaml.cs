@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using SchoolManagementSystem.Functionality;
+using SchoolManagementSystem.Functionality.Enums;
 
 namespace SchoolManagementSystem.User_Controls
 {
@@ -35,15 +37,29 @@ namespace SchoolManagementSystem.User_Controls
             String firstName = FirstNameTextBox.Text;
             String lastName = LastNameTextBox.Text;
             String fatherName = FatherNameTextBox.Text;
-            String gender = GenderComboBox.Text;
+            
+            
+            String genderText = GenderComboBox.Text;
+            Gender gender;
+            Enum.TryParse(genderText, out gender);
+
             int grade = int.Parse(GradeComboBox.Text);
             String phoneNumber = PhoneNumberTextBox.Text;
             String email = EmailTextBox.Text;
-            String bloodGroup = BloodGroupComboBox.Text;
+
+
+            String bloodGroupText = BloodGroupComboBox.Text;
+            BloodType bloodGroup;
+            Enum.TryParse(bloodGroupText, out bloodGroup);
+                        
             String address = AddressTextBox.Text;
             String guardianName = GuardianNameTextBox.Text;
             DateTime dateOfBirth = (DateTime) DOBDatePicker.SelectedDate;
             DateTime dateOfAdmissions = (DateTime) DOADatePicker.SelectedDate;
+
+            Student student = new Student(firstName, lastName, fatherName, gender, grade, 
+                phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
+                dateOfAdmissions);
 
             /*MessageBox.Show(firstName + "\n" 
                 + lastName + "\n"
