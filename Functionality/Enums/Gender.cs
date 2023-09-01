@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolManagementSystem
+namespace SchoolManagementSystem.Functionality.Enums
 {
     public enum Gender
     {
