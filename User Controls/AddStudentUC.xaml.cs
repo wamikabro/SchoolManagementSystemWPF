@@ -66,7 +66,15 @@ namespace SchoolManagementSystem.User_Controls
             }
 
 
-            DateTime dateOfAdmissions = (DateTime) DOADatePicker.SelectedDate;
+            DateTime dateOfAdmissions;
+            try
+            {
+                dateOfAdmissions = (DateTime)DOADatePicker.SelectedDate;
+            }
+            catch (Exception) {
+                MessageBox.Show("Date of Admissions must be set.");
+                return;
+            }
 
             Student student = new Student(firstName, lastName, fatherName, gender, grade, 
                 phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
