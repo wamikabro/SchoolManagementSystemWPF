@@ -77,23 +77,18 @@ namespace SchoolManagementSystem.User_Controls
                         
             String address = AddressTextBox.Text;
             String guardianName = GuardianNameTextBox.Text;
-            
-            Student student = new Student(firstName, lastName, fatherName, gender, grade, 
-                phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
-                dateOfAdmissions);
+            try
+            {
+                Student student = new Student(firstName, lastName, fatherName, gender, grade,
+                    phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
+                    dateOfAdmissions);
 
-            /*MessageBox.Show(firstName + "\n" 
-                + lastName + "\n"
-                + fatherName + "\n"
-                + gender + "\n"
-                + grade + "\n"
-                + phoneNumber + "\n"
-                + email + "\n"
-                + bloodGroup + "\n"
-                + address + "\n"
-                + guardianName + "\n"
-                + dateOfBirth + "\n"
-                + dateOfAdmissions + "\n");*/
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
         }
 
