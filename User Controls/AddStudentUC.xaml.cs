@@ -54,7 +54,18 @@ namespace SchoolManagementSystem.User_Controls
                         
             String address = AddressTextBox.Text;
             String guardianName = GuardianNameTextBox.Text;
-            DateTime dateOfBirth = (DateTime) DOBDatePicker.SelectedDate;
+            DateTime dateOfBirth;
+            try
+            {
+                dateOfBirth = (DateTime)DOBDatePicker.SelectedDate;
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Date of Birth must be set.");
+                return;
+            }
+
+
             DateTime dateOfAdmissions = (DateTime) DOADatePicker.SelectedDate;
 
             Student student = new Student(firstName, lastName, fatherName, gender, grade, 
