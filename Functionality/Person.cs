@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Functionality
                 {
                     /*This setter is simply checking if the name is greater or not
                      if not then the exception will be thrown */
-                    throw new ArgumentException("Name must be greater than 1 letter");
+                    throw new ArgumentException("First Name must be greater than 1 letter");
                 }
             }
         }
@@ -49,7 +49,7 @@ namespace SchoolManagementSystem.Functionality
                 {
                     /*This setter is simply checking if the name is greater or not
                      if not then the exception will be thrown */
-                    throw new ArgumentException("Name must be greater than 1 letter");
+                    throw new ArgumentException("Last Name must be greater than 1 letter");
                 }
             }
         }
@@ -66,7 +66,7 @@ namespace SchoolManagementSystem.Functionality
                 {
                     /*This setter is simply checking if the name is greater or not
                      if not then the exception will be thrown */
-                    throw new ArgumentException("Name must be greater than 1 letter");
+                    throw new ArgumentException("Father Name must be greater than 1 letter");
                 }
             }
         }
@@ -107,7 +107,7 @@ namespace SchoolManagementSystem.Functionality
                 else
                 {
                     // This setter is simply checking if the number is valid or not
-                    throw new ArgumentException("The Number is invalid");
+                    throw new ArgumentException("The Phone Number is invalid");
                 }
             }
         }
