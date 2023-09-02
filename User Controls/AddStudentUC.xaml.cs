@@ -34,6 +34,29 @@ namespace SchoolManagementSystem.User_Controls
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             // Fetching the selections
+            DateTime dateOfBirth;
+            try
+            {
+                dateOfBirth = (DateTime)DOBDatePicker.SelectedDate;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Date of Birth must be set.");
+                return;
+            }
+
+
+            DateTime dateOfAdmissions;
+            try
+            {
+                dateOfAdmissions = (DateTime)DOADatePicker.SelectedDate;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Date of Admissions must be set.");
+                return;
+            }
+
             String firstName = FirstNameTextBox.Text;
             String lastName = LastNameTextBox.Text;
             String fatherName = FatherNameTextBox.Text;
@@ -54,28 +77,7 @@ namespace SchoolManagementSystem.User_Controls
                         
             String address = AddressTextBox.Text;
             String guardianName = GuardianNameTextBox.Text;
-            DateTime dateOfBirth;
-            try
-            {
-                dateOfBirth = (DateTime)DOBDatePicker.SelectedDate;
-            }
-            catch(Exception)
-            {
-                MessageBox.Show("Date of Birth must be set.");
-                return;
-            }
-
-
-            DateTime dateOfAdmissions;
-            try
-            {
-                dateOfAdmissions = (DateTime)DOADatePicker.SelectedDate;
-            }
-            catch (Exception) {
-                MessageBox.Show("Date of Admissions must be set.");
-                return;
-            }
-
+            
             Student student = new Student(firstName, lastName, fatherName, gender, grade, 
                 phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
                 dateOfAdmissions);
