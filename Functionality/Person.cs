@@ -119,7 +119,8 @@ namespace SchoolManagementSystem.Functionality
             set
             {
                 if (value.ToLower().EndsWith("@gmail.com") || value.ToLower().EndsWith("@hotmail.com") ||
-                    value.ToLower().EndsWith("@icloud.com"))
+                    value.ToLower().EndsWith("@icloud.com") ||
+                    value.Equals(""))
                 {
                     this.email = value;
                 }
