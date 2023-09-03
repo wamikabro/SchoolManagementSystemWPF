@@ -24,7 +24,22 @@ namespace SchoolManagementSystem.Functionality
         {
             GuardianName = guardianName;
         }
+        
         // Getters and Setters of Student Class
-        public string GuardianName { get => guardianName; set => guardianName = value; }
+        public string GuardianName
+        {
+            get => guardianName;
+            set
+            {
+                if (value.Length > 1)
+                    this.guardianName = value;
+                else
+                {
+                    throw new ArgumentException("Guardian Name must be greater than 1 letter");
+                }
+            }
+        }
+
+
     }
 }
