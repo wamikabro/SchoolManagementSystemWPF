@@ -22,6 +22,19 @@ namespace SchoolManagementSystem.Functionality
         }
 
         // Getters and Setters of Items belonging to Teacher Class
-        public string Subject { get => subject; set => subject = value; }
+        public string Subject { get => subject; 
+            set
+            {
+                if (value.Length > 2)
+                {
+                    subject = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid Subject");
+                }
+
+            } 
+        }
     }
 }
