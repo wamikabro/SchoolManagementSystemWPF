@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,9 @@ namespace SchoolManagementSystem.Functionality
 {
     abstract public class Person
     {
+        // SQL Connection
+        protected SqlConnection con;
+
         // All these values will be used by Student and Teacher Object
         protected string firstName;
         protected string lastName;
@@ -266,6 +270,7 @@ namespace SchoolManagementSystem.Functionality
         // In case full information was given
         public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
         {
+            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
             FirstName = firstName;
             LastName = lastName;
             FatherName = fatherName;

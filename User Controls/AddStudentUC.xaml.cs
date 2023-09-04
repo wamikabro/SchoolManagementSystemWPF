@@ -31,8 +31,6 @@ namespace SchoolManagementSystem.User_Controls
             DOADatePicker.SelectedDate = DateTime.Today;
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
-
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {       
             // Fetching the selections
@@ -85,39 +83,8 @@ namespace SchoolManagementSystem.User_Controls
                 Student student = new Student(firstName, lastName, fatherName, gender, grade,
                     phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
                     dateOfAdmissions);
-                try
-                {
 
-                    // Store data in the Database
-                    SqlCommand storeStudent = new
-                        SqlCommand("INSERT INTO StudentTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @Grade, @PhoneNumber, @Email, @BloodGroup, @Address, @GuardianName, @DateOfBirth, @DateOfAdmissions)", con);
-                    // command type
-                    storeStudent.CommandType = CommandType.Text;
-
-                    // placement
-                    storeStudent.Parameters.AddWithValue("@FirstName", firstName);
-                    storeStudent.Parameters.AddWithValue("@LastName", lastName);
-                    storeStudent.Parameters.AddWithValue("@FatherName", fatherName);
-                    storeStudent.Parameters.AddWithValue("@Gender", gender);
-                    storeStudent.Parameters.AddWithValue("@Grade", grade);
-                    storeStudent.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                    storeStudent.Parameters.AddWithValue("@Email", email);
-                    storeStudent.Parameters.AddWithValue("@BloodGroup", bloodGroup);
-                    storeStudent.Parameters.AddWithValue("@Address", address);
-                    storeStudent.Parameters.AddWithValue("@GuardianName", guardianName);
-                    storeStudent.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                    storeStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
-
-
-
-                    con.Open();
-                    storeStudent.ExecuteNonQuery();
-                    con.Close();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                student.StoreStudent();
 
             }
             catch (ArgumentException ex)
