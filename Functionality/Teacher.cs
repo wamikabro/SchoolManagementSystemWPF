@@ -57,12 +57,12 @@ namespace SchoolManagementSystem.Functionality
                 storeTeacher.Parameters.AddWithValue("@Gender", gender.ToString());
                 storeTeacher.Parameters.AddWithValue("@Grade", grade);
                 storeTeacher.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                storeTeacher.Parameters.AddWithValue("@Address", address);
                 storeTeacher.Parameters.AddWithValue("@Email", email);
                 storeTeacher.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
-                storeTeacher.Parameters.AddWithValue("@Address", address);
-                storeTeacher.Parameters.AddWithValue("@Subject", subject);
                 storeTeacher.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
                 storeTeacher.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+                storeTeacher.Parameters.AddWithValue("@Subject", subject);
 
 
 
