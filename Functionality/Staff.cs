@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using SchoolManagementSystem.Functionality.Enums;
 
 namespace SchoolManagementSystem.Functionality
@@ -23,6 +24,19 @@ namespace SchoolManagementSystem.Functionality
         }
 
         // Getter Setter
-        public string JobTitle { get => jobTitle; set => jobTitle = value; }
+        public string JobTitle { 
+            get => jobTitle;
+            set
+            {
+                if (value.Length > 2)
+                {
+                    jobTitle = value;
+                }
+                else
+                {
+                   throw new ArgumentException("Invalid Job Title");
+                }
+            }
+        }
     }
 }
