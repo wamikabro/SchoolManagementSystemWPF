@@ -12,10 +12,7 @@ namespace SchoolManagementSystem.Functionality
         // Own Attributes
         private string subject;
 
-        // Construcor of Teacher
-        public Teacher()
-        {
-        }
+        // Constructor
         public Teacher(string firstName, string lastName,
                 string fatherName, Gender gender, int grade, string phoneNumber, string email,
                 BloodType bloodGroup, string address, string subject, DateTime dateOfBirth, DateTime dateOfAdmissions)

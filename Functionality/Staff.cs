@@ -12,11 +12,6 @@ namespace SchoolManagementSystem.Functionality
         // Own Attributes 
         private string jobTitle;
 
-        // Constructor of Teacher
-        public Staff()
-        {
-        }
-
         // Sending data to the constructor of Person wihtout Grade 
         // Since Staff has nothing to do with Grade (Classes) 
         public Staff(string firstName, string lastName,

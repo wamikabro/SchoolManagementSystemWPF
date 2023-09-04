@@ -15,10 +15,6 @@ namespace SchoolManagementSystem.Functionality
         private string guardianName;
 
 
-        // Constructors of Student
-        public Student()
-        {
-        }
 
         public Student(string firstName, string lastName,
                 string fatherName, Gender gender, int grade, string phoneNumber, string email,

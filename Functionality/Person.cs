@@ -209,10 +209,6 @@ namespace SchoolManagementSystem.Functionality
             data given is filled, otherwise the exception will be thrown
             so default constructor will never be called*/
 
-        // This constructor is needed to empty Children Teacher, Student can be created
-        public Person()
-        {
-        }
 
         // For those who has nohing to do with grades (classes) eg. Staff
         public Person(string firstName, string lastName, string fatherName, Gender gender, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
@@ -228,44 +224,6 @@ namespace SchoolManagementSystem.Functionality
             DateOfBirth = dateOfBirth;
             DateOfAdmissions = dateOfAdmissions;
         }
-        /* // Other Constructors
-        
-                // In case the person got admission on mandatory information only
-                public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber)
-                {
-                    FirstName = firstName;
-                    LastName = lastName;
-                    FatherName = fatherName;
-                    this.gender = gender;
-                    Grade = grade;
-                    PhoneNumber = phoneNumber;
-                    Identity = Identity++;
-                }
-                // In case email and bloodGroup are missing
-                public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber, string address)
-                {
-                    FirstName = firstName;
-                    LastName = lastName;
-                    FatherName = fatherName;
-                    this.gender = gender;
-                    Grade = grade;
-                    PhoneNumber = phoneNumber;
-                    Address = address;
-                    Identity = Identity++;
-                }
-                // In case bloodGroup is missing
-                public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber, string address, string email)
-                {
-                    FirstName = firstName;
-                    LastName = lastName;
-                    FatherName = fatherName;
-                    this.gender = gender;
-                    Grade = grade;
-                    PhoneNumber = phoneNumber;
-                    Address = address;
-                    Email = email;
-                    Identity = Identity++;
-                }*/
 
         // In case full information was given
         public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
