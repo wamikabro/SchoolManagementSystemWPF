@@ -17,7 +17,8 @@ namespace SchoolManagementSystem.Functionality
         private string jobTitle;
 
         // Sending data to the constructor of Person wihtout Grade 
-        // Since Staff has nothing to do with Grade (Classes) 
+        // and GuardianName Since Staff has nothing to do with Grade (Classes)
+        // And we don't need to know their guardian
         public Staff(string firstName, string lastName,
                 string fatherName, Gender gender, string phoneNumber, string email,
                 BloodType bloodGroup, string address, string jobTitle, DateTime dateOfBirth, DateTime dateOfAdmissions)
@@ -48,7 +49,7 @@ namespace SchoolManagementSystem.Functionality
             {
                 // Store data in the Database
                 SqlCommand storeStaff = new
-                    SqlCommand("INSERT INTO StaffTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @PhoneNumber, @Email, @BloodGroup, @Address, @DateOfBirth, @DateOfAdmissions)", con);
+                    SqlCommand("INSERT INTO StaffTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @PhoneNumber, @Address ,@Email, @BloodGroup, @DateOfBirth, @DateOfAdmissions, @JobTitle)", con);
                 // command type
                 storeStaff.CommandType = CommandType.Text;
 
@@ -57,14 +58,13 @@ namespace SchoolManagementSystem.Functionality
                 storeStaff.Parameters.AddWithValue("@LastName", lastName);
                 storeStaff.Parameters.AddWithValue("@FatherName", fatherName);
                 storeStaff.Parameters.AddWithValue("@Gender", gender.ToString());
-                storeStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
                 storeStaff.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                storeStaff.Parameters.AddWithValue("@Address", address);
                 storeStaff.Parameters.AddWithValue("@Email", email);
                 storeStaff.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
-                storeStaff.Parameters.AddWithValue("@Address", address);
                 storeStaff.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
                 storeStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
-
+                storeStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
 
 
                 con.Open();
