@@ -25,5 +25,68 @@ namespace SchoolManagementSystem.User_Controls
             InitializeComponent();
             DOADatePicker.SelectedDate = DateTime.Today;
         }
+
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Fetching the selections
+            DateTime dateOfBirth;
+            try
+            {
+                dateOfBirth = (DateTime)DOBDatePicker.SelectedDate;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Date of Birth must be set.");
+                return;
+            }
+
+
+            DateTime dateOfAdmissions;
+            try
+            {
+                dateOfAdmissions = (DateTime)DOADatePicker.SelectedDate;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Date of Admissions must be set.");
+                return;
+            }
+
+            String firstName = FirstNameTextBox.Text;
+            String lastName = LastNameTextBox.Text;
+            String fatherName = FatherNameTextBox.Text;
+
+
+            String genderText = GenderComboBox.Text;
+            Gender gender;
+            Enum.TryParse(genderText, out gender);
+
+            int grade = int.Parse(GradeComboBox.Text);
+            String phoneNumber = PhoneNumberTextBox.Text;
+            String email = EmailTextBox.Text;
+
+
+            String bloodGroupText = BloodGroupComboBox.Text;
+            BloodType bloodGroup;
+            Enum.TryParse(bloodGroupText, out bloodGroup);
+
+            String address = AddressTextBox.Text;
+            String subject = SubjectTextBox.Text;
+            try
+            {
+                // Data verification will be done in the class
+                Teacher teacher = new Teacher(firstName, lastName, fatherName, gender, grade,
+                    phoneNumber, email, bloodGroup, address, subject, dateOfBirth,
+                    dateOfAdmissions);
+
+                teacher.StoreTeacher();
+
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+        }
     }
 }
