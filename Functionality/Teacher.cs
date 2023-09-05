@@ -69,6 +69,11 @@ namespace SchoolManagementSystem.Functionality
                 con.Open();
                 storeTeacher.ExecuteNonQuery();
                 con.Close();
+
+                MessageBox.Show("Teacher Called \"" +
+                firstName + " " +
+                lastName +
+                "\"Added in Teachers Successful");
             }
             catch (SqlException ex)
             {
