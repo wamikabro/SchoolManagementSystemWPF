@@ -213,6 +213,7 @@ namespace SchoolManagementSystem.Functionality
         // For those who has nohing to do with grades (classes) eg. Staff
         public Person(string firstName, string lastName, string fatherName, Gender gender, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
         {
+            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
             FirstName = firstName;
             LastName = lastName;
             FatherName = fatherName;
