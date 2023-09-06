@@ -74,7 +74,7 @@ namespace SchoolManagementSystem.Functionality
                     lastName + 
                     "\"Added in Students Successful");
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
