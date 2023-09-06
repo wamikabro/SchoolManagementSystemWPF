@@ -43,7 +43,7 @@ namespace SchoolManagementSystem.Functionality
             }
         }
 
-        public void StoreStudent()
+        public void StoreStaff()
         {
             try
             {
