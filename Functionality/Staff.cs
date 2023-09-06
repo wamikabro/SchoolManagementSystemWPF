@@ -70,6 +70,11 @@ namespace SchoolManagementSystem.Functionality
                 con.Open();
                 storeStaff.ExecuteNonQuery();
                 con.Close();
+
+                MessageBox.Show(jobTitle + " Called \"" +
+               firstName + " " +
+               lastName +
+               "\"Added in Staff Successfully");
             }
             catch (SqlException ex)
             {
