@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,24 @@ namespace SchoolManagementSystem.User_Controls
         public SearchStudentUC()
         {
             InitializeComponent();
+            LoadStudentDataGrid();
+        }
+
+        // database connection 
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+        
+        public void LoadStudentDataGrid()
+        {
+            SqlCommand loadStudentData = new 
+                SqlCommand("SELECT * FROM StudentTable", con);
+            DataTable dataTable = new DataTable();
+            
+            con.Open();
+            SqlDataReader sqlDataReader = loadStudentData.ExecuteReader();
+            dataTable.Load(sqlDataReader);
+            con.Close();
+
+            StudentDataGrid.ItemsSource = dataTable.DefaultView;
         }
     }
 }
