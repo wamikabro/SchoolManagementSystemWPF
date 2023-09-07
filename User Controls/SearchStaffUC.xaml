@@ -36,6 +36,6 @@
         </Border>
 
         <!-- Data Table -->
-        <DataGrid ItemsSource="{Binding Students}"  AutoGenerateColumns="True" Margin="20,80,20,20"/>
+        <DataGrid x:Name="StaffDataGrid" IsReadOnly="True"  AutoGenerateColumns="True" Margin="20,80,20,20"/>
     </Grid>
 </UserControl>

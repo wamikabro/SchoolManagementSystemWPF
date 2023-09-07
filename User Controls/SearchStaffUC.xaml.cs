@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,25 @@ namespace SchoolManagementSystem.User_Controls
         public SearchStaffUC()
         {
             InitializeComponent();
+            LoadStaffDataGrid();
         }
+
+        // database connection 
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+
+        public void LoadStaffDataGrid()
+        {
+            SqlCommand loadStaffData = new
+                SqlCommand("SELECT * FROM StaffTable", con);
+            DataTable dataTable = new DataTable();
+
+            con.Open();
+            SqlDataReader sqlDataReader = loadStaffData.ExecuteReader();
+            dataTable.Load(sqlDataReader);
+            con.Close();
+
+            StaffDataGrid.ItemsSource = dataTable.DefaultView;
+        }
+
     }
 }
