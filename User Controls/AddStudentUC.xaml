@@ -62,7 +62,7 @@
 
                         <StackPanel Orientation="Vertical">
                             <Label Content="Blood Group" Width="200"/>
-                        <ComboBox x:Name="BloodGroupComboBox" Width="200" Margin="5 0" SelectedItem="OPositive">
+                        <ComboBox x:Name="BloodGroupComboBox" Width="200" Margin="5 0">
                             <ComboBoxItem Content="ONegative" IsSelected="True"/>
                             <ComboBoxItem Content="OPositive" />
                             <ComboBoxItem Content="ANegative" />
