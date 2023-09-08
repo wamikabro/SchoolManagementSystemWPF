@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SchoolManagementSystem.Functionality.Enums;
+using SchoolManagementSystem.Functionality;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,6 +89,22 @@ namespace SchoolManagementSystem.User_Controls
                 MessageBox.Show(ex.Message);
                 return;
             }
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            FatherNameTextBox.Text = "";
+            GenderComboBox.SelectedIndex = 0;
+            GradeComboBox.SelectedIndex = 0;
+            PhoneNumberTextBox.Text = "";
+            EmailTextBox.Text = "";
+            BloodGroupComboBox.SelectedIndex = 0;
+            AddressTextBox.Text = "";
+            SubjectTextBox.Text = "";
+            DOBDatePicker.SelectedDate = null;
+            DOADatePicker.SelectedDate = DateTime.Today;
         }
     }
 }
