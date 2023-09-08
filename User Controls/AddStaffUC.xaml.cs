@@ -66,7 +66,6 @@ namespace SchoolManagementSystem.User_Controls
             String phoneNumber = PhoneNumberTextBox.Text;
             String email = EmailTextBox.Text;
 
-
             String bloodGroupText = BloodGroupComboBox.Text;
             BloodType bloodGroup;
             Enum.TryParse(bloodGroupText, out bloodGroup);
@@ -82,6 +81,9 @@ namespace SchoolManagementSystem.User_Controls
 
                 staff.StoreStaff();
 
+                // After submission reset entries
+                ResetEntries();
+
             }
             catch (ArgumentException ex)
             {
@@ -90,7 +92,7 @@ namespace SchoolManagementSystem.User_Controls
             }
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        private void ResetEntries()
         {
             FirstNameTextBox.Text = "";
             LastNameTextBox.Text = "";
@@ -103,6 +105,10 @@ namespace SchoolManagementSystem.User_Controls
             JobTitleTextBox.Text = "";
             DOBDatePicker.SelectedDate = null;
             DOADatePicker.SelectedDate = DateTime.Today;
+        }
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            ResetEntries();
         }
     }
 }
