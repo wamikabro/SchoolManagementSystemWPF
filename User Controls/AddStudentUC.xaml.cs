@@ -85,7 +85,10 @@ namespace SchoolManagementSystem.User_Controls
                     dateOfAdmissions);
 
                 student.StoreStudent();
-            
+
+                // After submission reset entries
+                ResetButtonClick();
+
             }
             catch (ArgumentException ex)
             {
@@ -95,7 +98,7 @@ namespace SchoolManagementSystem.User_Controls
 
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        private void ResetButtonClick()
         {
             FirstNameTextBox.Text = "";
             LastNameTextBox.Text = "";
@@ -109,6 +112,10 @@ namespace SchoolManagementSystem.User_Controls
             GuardianNameTextBox.Text = "";
             DOBDatePicker.SelectedDate = null;
             DOADatePicker.SelectedDate = DateTime.Today;
+        }
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            ResetButtonClick();
         }
     }
 }
