@@ -89,5 +89,20 @@ namespace SchoolManagementSystem.User_Controls
                 return;
             }
         }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            FatherNameTextBox.Text = "";
+            GenderComboBox.SelectedIndex = 0;
+            PhoneNumberTextBox.Text = "";
+            EmailTextBox.Text = "";
+            BloodGroupComboBox.SelectedIndex = 0;
+            AddressTextBox.Text = "";
+            JobTitleTextBox.Text = "";
+            DOBDatePicker.SelectedDate = null;
+            DOADatePicker.SelectedDate = DateTime.Today;
+        }
     }
 }
