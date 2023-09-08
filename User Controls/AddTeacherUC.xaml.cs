@@ -83,6 +83,8 @@ namespace SchoolManagementSystem.User_Controls
 
                 teacher.StoreTeacher();
 
+                // After submission reset entries
+                ResetEntries();
             }
             catch (ArgumentException ex)
             {
@@ -91,7 +93,7 @@ namespace SchoolManagementSystem.User_Controls
             }
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        private void ResetEntries()
         {
             FirstNameTextBox.Text = "";
             LastNameTextBox.Text = "";
@@ -105,6 +107,11 @@ namespace SchoolManagementSystem.User_Controls
             SubjectTextBox.Text = "";
             DOBDatePicker.SelectedDate = null;
             DOADatePicker.SelectedDate = DateTime.Today;
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            ResetEntries();
         }
     }
 }
