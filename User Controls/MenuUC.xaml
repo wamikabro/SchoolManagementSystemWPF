@@ -28,7 +28,10 @@
                     <GradientStop Color="#6610F2" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 1" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Text="Grade 1" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <TextBlock Text="{Binding Grade1Teacher}" Foreground="White" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
         </Border>
 
         <!-- Card 2 -->
@@ -40,7 +43,9 @@
                     <GradientStop Color="#F21010" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 2" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" />
+            <StackPanel>
+                <TextBlock Text="Grade 2" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" />
+            </StackPanel>
         </Border>
 
         <!-- Card 3 -->
@@ -52,7 +57,9 @@
                     <GradientStop Color="#10F210" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 3" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Text="Grade 3" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
         </Border>
 
         <!-- Row 2 -->
@@ -65,7 +72,9 @@
                     <GradientStop Color="#F26B10" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 4" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            <StackPanel>
+                <TextBlock Text="Grade 4" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+            </StackPanel>
         </Border>
 
         <!-- Card 5 -->
@@ -77,7 +86,9 @@
                     <GradientStop Color="#F2A510" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 5" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Text="Grade 5" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
         </Border>
 
         <!-- Card 6 -->
@@ -89,7 +100,9 @@
                     <GradientStop Color="#10F2A1" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 6" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Text="Grade 6" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
         </Border>
 
         <!-- Row 3 -->
@@ -102,7 +115,9 @@
                     <GradientStop Color="#F2106B" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 7" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Text="Grade 7" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
         </Border>
 
         <!-- Card 8 -->
@@ -114,7 +129,9 @@
                     <GradientStop Color="#F21089" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Text="Grade 8" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            <StackPanel>
+                <TextBlock Text="Grade 8" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+            </StackPanel>
         </Border>
 
         <!-- Card 9 -->
