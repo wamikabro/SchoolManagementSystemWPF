@@ -20,9 +20,15 @@ namespace SchoolManagementSystem.User_Controls
     /// </summary>
     public partial class SettingsUC : UserControl
     {
+        public int fontSize;
         public SettingsUC()
         {
             InitializeComponent();
+        }
+
+        private void FontSizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            fontSize = (int) FontSizeSlider.Value;
         }
     }
 }
