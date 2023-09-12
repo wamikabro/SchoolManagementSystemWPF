@@ -42,5 +42,15 @@ namespace SchoolManagementSystem.User_Controls
             FontSizeSlider.Value = reader.GetInt32(0);
             fontSize = (int) FontSizeSlider.Value;
         }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+            con.Open();
+
+            SqlCommand updateFontSize = new SqlCommand("UPDATE Settings SET FontSize = @NewFontSize", con);
+            updateFontSize.Parameters.AddWithValue("@NewFontSize", FontSizeSlider.Value);
+            updateFontSize.ExecuteNonQuery();
+        }
     }
 }
