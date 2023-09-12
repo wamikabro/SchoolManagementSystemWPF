@@ -26,7 +26,7 @@ namespace SchoolManagementSystem.User_Controls
         protected SqlConnection con;
 
 
-        public int fontSize;
+
         public SettingsUC()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace SchoolManagementSystem.User_Controls
             reader.Read();
 
             FontSizeSlider.Value = reader.GetInt32(0);
-            fontSize = (int) FontSizeSlider.Value;
+
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
