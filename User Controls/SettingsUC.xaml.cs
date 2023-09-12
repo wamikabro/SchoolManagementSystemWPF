@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +22,24 @@ namespace SchoolManagementSystem.User_Controls
     /// </summary>
     public partial class SettingsUC : UserControl
     {
+        // SQL Connection
+        protected SqlConnection con;
+
+
         public int fontSize;
         public SettingsUC()
         {
             InitializeComponent();
-        }
+            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
 
-        private void FontSizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
+            con.Open();
+
+            SqlCommand fontSizeDatabase = new
+                SqlCommand("SELECT FontSize from Settings", con);
+            SqlDataReader reader = fontSizeDatabase.ExecuteReader();
+            reader.Read();
+
+            FontSizeSlider.Value = reader.GetInt32(0);
             fontSize = (int) FontSizeSlider.Value;
         }
     }
