@@ -87,7 +87,7 @@ namespace SchoolManagementSystem.User_Controls
                 student.StoreStudent();
 
                 // After submission reset entries
-                ResetButtonClick();
+                ResetEntries();
 
             }
             catch (ArgumentException ex)
@@ -98,7 +98,7 @@ namespace SchoolManagementSystem.User_Controls
 
         }
 
-        private void ResetButtonClick()
+        private void ResetEntries()
         {
             FirstNameTextBox.Text = "";
             LastNameTextBox.Text = "";
@@ -115,7 +115,7 @@ namespace SchoolManagementSystem.User_Controls
         }
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            ResetButtonClick();
+            ResetEntries();
         }
     }
 }
