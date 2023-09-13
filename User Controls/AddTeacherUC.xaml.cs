@@ -54,9 +54,9 @@ namespace SchoolManagementSystem.User_Controls
                 return;
             }
 
-            String firstName = FirstNameTextBox.Text;
-            String lastName = LastNameTextBox.Text;
-            String fatherName = FatherNameTextBox.Text;
+            String firstName = FirstNameTextBox.Text.ToLower();
+            String lastName = LastNameTextBox.Text.ToLower();
+            String fatherName = FatherNameTextBox.Text.ToLower();
 
 
             String genderText = GenderComboBox.Text;
@@ -65,7 +65,7 @@ namespace SchoolManagementSystem.User_Controls
 
             int grade = int.Parse(GradeComboBox.Text);
             String phoneNumber = PhoneNumberTextBox.Text;
-            String email = EmailTextBox.Text;
+            String email = EmailTextBox.Text.ToLower();
 
 
             String bloodGroupText = BloodGroupComboBox.Text;
