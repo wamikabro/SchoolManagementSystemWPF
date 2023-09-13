@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\
 SchoolManagementSystem
 none
 false
 DEBUG;TRACE
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\App.xaml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\App.xaml
 13760030312
 
-15-1771314845
-141657899602
+21-786780406
+34-1753557077
 ResourceDictionaries\ButtonStyles.xaml;ResourceDictionaries\Colors.xaml;Home.xaml;ResourceDictionaries\GlobalStyles.xaml;User Controls\AddStaffUC.xaml;User Controls\AddStudentUC.xaml;User Controls\AddTeacherUC.xaml;User Controls\MenuUC.xaml;User Controls\ReportUC.xaml;User Controls\SearchStaffUC.xaml;User Controls\SearchStudentUC.xaml;User Controls\SearchTeacherUC.xaml;User Controls\SettingsUC.xaml;
 
-True
+False
 

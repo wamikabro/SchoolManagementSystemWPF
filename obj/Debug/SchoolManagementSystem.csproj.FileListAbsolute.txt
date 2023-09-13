@@ -39,3 +39,75 @@ C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchStaffUC.g.cs
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\User Controls\SearchStaffUC.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\ResourceDictionaries\GlobalStyles.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe.config
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.exe
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\SchoolManagementSystem.pdb
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\FontAwesome.WPF.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\FontAwesome.WPF.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\ButtonStyles.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\Colors.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\GlobalStyles.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\Home.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStaffUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStudentUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddTeacherUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\MenuUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\ReportUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SearchStaffUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SearchStudentUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SearchTeacherUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SettingsUC.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\App.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem_MarkupCompile.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem_MarkupCompile.lref
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\App.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\Home.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStaffUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStudentUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddTeacherUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\MenuUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\ReportUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SearchStaffUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SearchStudentUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SearchTeacherUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\SettingsUC.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.g.resources
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Properties.Resources.resources
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.GenerateResource.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CopyComplete
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.exe
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\Google.Protobuf.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\MySql.Data.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Buffers.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.IO.Pipelines.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Memory.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\ZstdSharp.dll
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\Google.Protobuf.pdb
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\Google.Protobuf.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\MySql.Data.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Buffers.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.IO.Pipelines.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Memory.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
