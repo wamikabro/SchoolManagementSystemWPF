@@ -20,8 +20,12 @@ namespace SchoolManagementSystem.User_Controls
     /// <summary>
     /// Interaction logic for SearchStaffUC.xaml
     /// </summary>
+ 
+
     public partial class SearchStaffUC : UserControl
     {
+        DataTable dataTable;
+        bool filteredData = false;
         public SearchStaffUC()
         {
             InitializeComponent();
@@ -45,5 +49,28 @@ namespace SchoolManagementSystem.User_Controls
             StaffDataGrid.ItemsSource = dataTable.DefaultView;
         }
 
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SearchTextBox.Text != String.Empty)
+            {
+                filteredData = true;
+                // Get the filter criteria from the search box
+                string filter = SearchTextBox.Text.ToLower();
+
+                dataTable.DefaultView.RowFilter = "FirstName LIKE '%" + filter +
+                    "%' OR LastName LIKE '%" + filter +
+                    "%' OR FatherName LIKE '%" + filter +
+                    "%' OR Email LIKE '%" + filter + "%'";
+
+                // Refresh the DataGridView to reflect the filtered data
+                StaffDataGrid.ItemsSource = dataTable.DefaultView;
+            }
+
+            if (filteredData == true && SearchTextBox.Text == String.Empty)
+            {
+                filteredData = false;
+                LoadStaffDataGrid();
+            }
+        }
     }
 }
