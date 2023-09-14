@@ -55,7 +55,8 @@ namespace SchoolManagementSystem.User_Controls
                 // Get the filter criteria from the search box
                 string filter = SearchTextBox.Text.ToLower();
 
-                dataTable.DefaultView.RowFilter = "FirstName LIKE '%" + filter +
+                dataTable.DefaultView.RowFilter = "ID LIKE '%" + filter +
+                    "%' OR FirstName LIKE '%" + filter +
                     "%' OR LastName LIKE '%" + filter +
                     "%' OR FatherName LIKE '%" + filter +
                     "%' OR Email LIKE '%" + filter + "%'";
