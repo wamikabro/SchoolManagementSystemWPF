@@ -22,6 +22,8 @@ namespace SchoolManagementSystem.User_Controls
     /// </summary>
     public partial class SearchTeacherUC : UserControl
     {
+        DataTable dataTable;
+        bool filteredData = false;
         public SearchTeacherUC()
         {
             InitializeComponent();
@@ -43,6 +45,30 @@ namespace SchoolManagementSystem.User_Controls
             con.Close();
 
             TeacherDataGrid.ItemsSource = dataTable.DefaultView;
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SearchTextBox.Text != String.Empty)
+            {
+                filteredData = true;
+                // Get the filter criteria from the search box
+                string filter = SearchTextBox.Text.ToLower();
+
+                dataTable.DefaultView.RowFilter = "FirstName LIKE '%" + filter +
+                    "%' OR LastName LIKE '%" + filter +
+                    "%' OR FatherName LIKE '%" + filter +
+                    "%' OR Email LIKE '%" + filter + "%'";
+
+                // Refresh the DataGridView to reflect the filtered data
+                TeacherDataGrid.ItemsSource = dataTable.DefaultView;
+            }
+
+            if (filteredData == true && SearchTextBox.Text == String.Empty)
+            {
+                filteredData = false;
+                LoadTeacherDataGrid();
+            }
         }
     }
 }
