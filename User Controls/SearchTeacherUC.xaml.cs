@@ -37,7 +37,7 @@ namespace SchoolManagementSystem.User_Controls
         {
             SqlCommand loadTeacherData = new
                 SqlCommand("SELECT * FROM TeacherTable", con);
-            DataTable dataTable = new DataTable();
+            dataTable = new DataTable();
 
             con.Open();
             SqlDataReader sqlDataReader = loadTeacherData.ExecuteReader();

@@ -39,7 +39,7 @@ namespace SchoolManagementSystem.User_Controls
         {
             SqlCommand loadStaffData = new
                 SqlCommand("SELECT * FROM StaffTable", con);
-            DataTable dataTable = new DataTable();
+            dataTable = new DataTable();
 
             con.Open();
             SqlDataReader sqlDataReader = loadStaffData.ExecuteReader();
