@@ -73,5 +73,16 @@ namespace SchoolManagementSystem.User_Controls
             }
 
         }
+
+        private void StudentDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Get the selected item (row) when double-clicked
+            DataRowView selectedItem = (DataRowView)StudentDataGrid.SelectedItem;
+
+            if (selectedItem!= null)
+            {
+                int selectedID = (int) selectedItem["ID"];
+            }
+        }
     }
 }
