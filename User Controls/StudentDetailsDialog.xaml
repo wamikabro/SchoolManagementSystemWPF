@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="SchoolManagementSystem.User_Controls.StudentDetailsDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchoolManagementSystem.User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="400">
+    <Grid>
+        <Grid>
+            <!-- Edit icon label in the top-right corner -->
+            <Label Content="Edit" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
+
+            <!-- Labels and read-only text boxes -->
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="First Name" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="FirstNameTextBox" HorizontalAlignment="Left" Width="150" IsReadOnly="True" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Last Name" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="LastNameTextBox" HorizontalAlignment="Left" Width="150" IsReadOnly="True" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Father Name" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="FatherNameTextBox" HorizontalAlignment="Left" Width="150" IsReadOnly="True" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Gender" HorizontalAlignment="Left"/>
+                        <ComboBox Name="GenderComboBox" HorizontalAlignment="Left" Width="150">
+                            <ComboBoxItem Content="Male" IsSelected="True"/>
+                            <ComboBoxItem Content="Female"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Grade" HorizontalAlignment="Left"/>
+                        <ComboBox Name="GradeComboBox" HorizontalAlignment="Left" Width="150">
+                            <ComboBoxItem Content="1" IsSelected="True" />
+                            <ComboBoxItem Content="2" />
+                            <ComboBoxItem Content="3" />
+                            <ComboBoxItem Content="4" />
+                            <ComboBoxItem Content="5" />
+                            <ComboBoxItem Content="6" />
+                            <ComboBoxItem Content="7" />
+                            <ComboBoxItem Content="8" />
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Phone Number" HorizontalAlignment="Left"/>
+                        <TextBox Name="PhoneNumberTextBox" Width="150" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="40,0,0,0">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Email" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="EmailTextBox" Width="150" HorizontalAlignment="Left"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Blood Group" HorizontalAlignment="Left"/>
+                        <ComboBox x:Name="BloodGroupComboBox" Width="150" HorizontalAlignment="Left">
+                            <ComboBoxItem Content="ONegative" IsSelected="True"/>
+                            <ComboBoxItem Content="OPositive" />
+                            <ComboBoxItem Content="ANegative" />
+                            <ComboBoxItem Content="APositive" />
+                            <ComboBoxItem Content="BNegative" />
+                            <ComboBoxItem Content="BPositive" />
+                            <ComboBoxItem Content="ABNegative" />
+                            <ComboBoxItem Content="ABPositive" />
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Address" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="AddressTextBox" Width="150" HorizontalAlignment="Left"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Guardian Name" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="GuardianNameTextBox" Width="150" HorizontalAlignment="Left" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Date of Birth" HorizontalAlignment="Left"/>
+                        <DatePicker x:Name="DOBDatePicker" Width="150" HorizontalAlignment="Left" Height="35"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Date of Admission" HorizontalAlignment="Left"/>
+                        <DatePicker x:Name="DOADatePicker" Width="150" HorizontalAlignment="Left" Height="35"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Okay button -->
+            <Button Content="Okay" Height="30" Width="120" HorizontalAlignment="Center" VerticalAlignment="bottom" Margin="0,0,0,5"/>
+        </Grid>
+    </Grid>
+</UserControl>
