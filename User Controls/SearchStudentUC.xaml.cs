@@ -82,6 +82,24 @@ namespace SchoolManagementSystem.User_Controls
             if (selectedItem!= null)
             {
                 int selectedID = (int) selectedItem["ID"];
+
+                // Create an instance of StudentDetailsDialog
+                StudentDetailsDialog studentDetailsDialog = new StudentDetailsDialog();
+
+                // Populate the UserControl's data elements with the selected data
+                studentDetailsDialog.FirstNameTextBox.Text = (string) selectedItem["FirstName"];
+                // Set other TextBoxes' Text properties as needed
+
+                // Create and show the dialog window
+                var dialogWindow = new Window
+                {
+                    Content = studentDetailsDialog,
+                    Title = "Student Details",
+                    Width = 400,
+                    Height = 450,
+                    WindowStartupLocation = WindowStartupLocation.CenterScreen
+                };
+                dialogWindow.ShowDialog();
             }
         }
     }
