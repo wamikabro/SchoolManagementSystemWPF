@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolManagementSystem.Functionality.Enums;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -88,7 +89,17 @@ namespace SchoolManagementSystem.User_Controls
 
                 // Populate the UserControl's data elements with the selected data
                 studentDetailsDialog.FirstNameTextBox.Text = (string) selectedItem["FirstName"];
-                // Set other TextBoxes' Text properties as needed
+                studentDetailsDialog.LastNameTextBox.Text = (string)selectedItem["LastName"];
+                studentDetailsDialog.FatherNameTextBox.Text = (string)selectedItem["FatherName"];
+                studentDetailsDialog.GenderComboBox.SelectedItem = selectedItem["Gender"];
+                studentDetailsDialog.GradeComboBox.SelectedItem = selectedItem["Grade"];
+                studentDetailsDialog.PhoneNumberTextBox.Text = (string)selectedItem["PhoneNumber"];
+                studentDetailsDialog.EmailTextBox.Text = (string)selectedItem["Email"];
+                studentDetailsDialog.BloodGroupComboBox.SelectedItem = (string)selectedItem["BloodGroup"];
+                studentDetailsDialog.AddressTextBox.Text = (string)selectedItem["Address"];
+                studentDetailsDialog.GuardianNameTextBox.Text = (string)selectedItem["GuardianName"];
+                studentDetailsDialog.DOBDatePicker.SelectedDate = (DateTime) selectedItem["DateOfBirth"];
+                studentDetailsDialog.DOADatePicker.SelectedDate = (DateTime) selectedItem["DateOfAdmissions"];
 
                 // Create and show the dialog window
                 var dialogWindow = new Window
