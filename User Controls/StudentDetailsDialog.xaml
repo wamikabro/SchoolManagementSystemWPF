@@ -6,9 +6,8 @@
              xmlns:local="clr-namespace:SchoolManagementSystem.User_Controls"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
-    <Grid>
-        <Grid>
-            <!-- Edit icon label in the top-right corner -->
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <!-- Edit icon label in the top-right corner -->
             <Label Content="Edit" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
 
             <!-- Labels and read-only text boxes -->
@@ -96,5 +95,4 @@
             <!-- Okay button -->
             <Button Content="Okay" Height="30" Width="120" HorizontalAlignment="Center" VerticalAlignment="bottom" Margin="0,0,0,5"/>
         </Grid>
-    </Grid>
 </UserControl>
