@@ -111,3 +111,5 @@ C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Memor
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\StudentDetailsDialog.g.cs
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\StudentDetailsDialog.baml

@@ -82,7 +82,6 @@ namespace SchoolManagementSystem.User_Controls
 
             if (selectedItem!= null)
             {
-                int selectedID = (int) selectedItem["ID"];
 
                 // Create an instance of StudentDetailsDialog
                 StudentDetailsDialog studentDetailsDialog = new StudentDetailsDialog();
