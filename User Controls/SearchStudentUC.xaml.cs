@@ -91,10 +91,18 @@ namespace SchoolManagementSystem.User_Controls
                 studentDetailsDialog.LastNameTextBox.Text = (string) selectedItem["LastName"];
                 studentDetailsDialog.FatherNameTextBox.Text = (string) selectedItem["FatherName"];
 
+                // Set right gender by first converting gender to string and comparing it with
+                // Male, if gender is male then set GenderComboBox's index to 0 otherwise 1.
                 studentDetailsDialog.GenderComboBox.SelectedIndex =
                     selectedItem["Gender"].ToString().Equals("Male") ? 0 : 1;
 
-                studentDetailsDialog.GradeComboBox.SelectedItem = selectedItem["Grade"];
+                // Cast the Grade to int. As we know Grade 1 is on 0 index and so on.
+                // So by subtracting 1, we are actually chosing the right grade from combobox
+                // eg. Student is in Grade 3. To chose grade 3 from Index of Combo box we need 2 index
+                // which is 3 - 1 = 2. That's what we've done.
+                studentDetailsDialog.GradeComboBox.SelectedIndex = (int) selectedItem["Grade"] - 1;
+
+
                 studentDetailsDialog.PhoneNumberTextBox.Text = (string) selectedItem["PhoneNumber"];
                 studentDetailsDialog.EmailTextBox.Text = (string) selectedItem["Email"];
                 studentDetailsDialog.BloodGroupComboBox.SelectedItem = (string) selectedItem["BloodGroup"];
