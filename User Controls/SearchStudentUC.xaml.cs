@@ -88,15 +88,18 @@ namespace SchoolManagementSystem.User_Controls
 
                 // Populate the UserControl's data elements with the selected data
                 studentDetailsDialog.FirstNameTextBox.Text = (string) selectedItem["FirstName"];
-                studentDetailsDialog.LastNameTextBox.Text = (string)selectedItem["LastName"];
-                studentDetailsDialog.FatherNameTextBox.Text = (string)selectedItem["FatherName"];
-                studentDetailsDialog.GenderComboBox.SelectedItem = selectedItem["Gender"];
+                studentDetailsDialog.LastNameTextBox.Text = (string) selectedItem["LastName"];
+                studentDetailsDialog.FatherNameTextBox.Text = (string) selectedItem["FatherName"];
+
+                studentDetailsDialog.GenderComboBox.SelectedIndex =
+                    selectedItem["Gender"].ToString().Equals("Male") ? 0 : 1;
+
                 studentDetailsDialog.GradeComboBox.SelectedItem = selectedItem["Grade"];
-                studentDetailsDialog.PhoneNumberTextBox.Text = (string)selectedItem["PhoneNumber"];
-                studentDetailsDialog.EmailTextBox.Text = (string)selectedItem["Email"];
-                studentDetailsDialog.BloodGroupComboBox.SelectedItem = (string)selectedItem["BloodGroup"];
-                studentDetailsDialog.AddressTextBox.Text = (string)selectedItem["Address"];
-                studentDetailsDialog.GuardianNameTextBox.Text = (string)selectedItem["GuardianName"];
+                studentDetailsDialog.PhoneNumberTextBox.Text = (string) selectedItem["PhoneNumber"];
+                studentDetailsDialog.EmailTextBox.Text = (string) selectedItem["Email"];
+                studentDetailsDialog.BloodGroupComboBox.SelectedItem = (string) selectedItem["BloodGroup"];
+                studentDetailsDialog.AddressTextBox.Text = (string) selectedItem["Address"];
+                studentDetailsDialog.GuardianNameTextBox.Text = (string) selectedItem["GuardianName"];
                 studentDetailsDialog.DOBDatePicker.SelectedDate = (DateTime) selectedItem["DateOfBirth"];
                 studentDetailsDialog.DOADatePicker.SelectedDate = (DateTime) selectedItem["DateOfAdmissions"];
 
