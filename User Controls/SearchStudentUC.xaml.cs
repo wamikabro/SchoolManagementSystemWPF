@@ -105,7 +105,42 @@ namespace SchoolManagementSystem.User_Controls
 
                 studentDetailsDialog.PhoneNumberTextBox.Text = (string) selectedItem["PhoneNumber"];
                 studentDetailsDialog.EmailTextBox.Text = (string) selectedItem["Email"];
-                studentDetailsDialog.BloodGroupComboBox.SelectedItem = (string) selectedItem["BloodGroup"];
+
+                /*
+                // This way of showing right BloodGroup isn't working because I don't know
+                // How to loop through ComboBox items.
+                
+                for(int i = 0; i < studentDetailsDialog.BloodGroupComboBox.Items.Count; i++)
+                {
+                    if (selectedItem["BloodGroup"].
+                        ToString().
+                        Equals(studentDetailsDialog.BloodGroupComboBox.Items[i].ToString()))
+                    {
+                        studentDetailsDialog.BloodGroupComboBox.SelectedIndex = i;
+                    }
+                    
+                }*/
+
+                // Fetched BloodGroup and converted to ToString. 
+                // Checked one by one, and showed the one that matches.
+                string BloodGroupText = selectedItem["BloodGroup"].ToString();
+                if (BloodGroupText.Equals("ONegative"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 0;
+                else if (BloodGroupText.Equals("OPositive"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 1;
+                else if (BloodGroupText.Equals("ANegative"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 2;
+                else if (BloodGroupText.Equals("APositive"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 3;
+                else if (BloodGroupText.Equals("BNegative"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 4;
+                else if (BloodGroupText.Equals("BPositive"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 5;
+                else if (BloodGroupText.Equals("ABNegative"))
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 6;
+                else
+                    studentDetailsDialog.BloodGroupComboBox.SelectedIndex = 7;
+
                 studentDetailsDialog.AddressTextBox.Text = (string) selectedItem["Address"];
                 studentDetailsDialog.GuardianNameTextBox.Text = (string) selectedItem["GuardianName"];
                 studentDetailsDialog.DOBDatePicker.SelectedDate = (DateTime) selectedItem["DateOfBirth"];
