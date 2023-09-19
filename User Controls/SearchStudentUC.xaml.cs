@@ -153,6 +153,7 @@ namespace SchoolManagementSystem.User_Controls
                     Title = "Student Details",
                     Width = 400,
                     Height = 450,
+                    ResizeMode = ResizeMode.NoResize,
                     WindowStartupLocation = WindowStartupLocation.CenterScreen
                 };
                 dialogWindow.ShowDialog();
