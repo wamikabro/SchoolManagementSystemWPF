@@ -27,14 +27,14 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical">
                         <Label Content="Gender" HorizontalAlignment="Left"/>
-                        <ComboBox Name="GenderComboBox" HorizontalAlignment="Left" Width="150">
+                        <ComboBox IsEnabled="False" Name="GenderComboBox" HorizontalAlignment="Left" Width="150">
                             <ComboBoxItem Content="Male" IsSelected="True"/>
                             <ComboBoxItem Content="Female"/>
                         </ComboBox>
                     </StackPanel>
                     <StackPanel Orientation="Vertical">
                         <Label Content="Grade" HorizontalAlignment="Left"/>
-                        <ComboBox Name="GradeComboBox" HorizontalAlignment="Left" Width="150">
+                        <ComboBox IsEnabled="False" Name="GradeComboBox" HorizontalAlignment="Left" Width="150">
                             <ComboBoxItem Content="1" IsSelected="True" />
                             <ComboBoxItem Content="2" />
                             <ComboBoxItem Content="3" />
@@ -47,18 +47,18 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical">
                         <Label Content="Phone Number" HorizontalAlignment="Left"/>
-                        <TextBox Name="PhoneNumberTextBox" Width="150" HorizontalAlignment="Left"/>
+                    <TextBox IsReadOnly="True" Name="PhoneNumberTextBox" Width="150" HorizontalAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Margin="40,0,0,0">
                     <StackPanel Orientation="Vertical">
                         <Label Content="Email" HorizontalAlignment="Left"/>
-                        <TextBox x:Name="EmailTextBox" Width="150" HorizontalAlignment="Left"/>
+                    <TextBox IsReadOnly="True" x:Name="EmailTextBox" Width="150" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
                         <Label Content="Blood Group" HorizontalAlignment="Left"/>
-                        <ComboBox x:Name="BloodGroupComboBox" Width="150" HorizontalAlignment="Left">
+                        <ComboBox IsEnabled="False" x:Name="BloodGroupComboBox" Width="150" HorizontalAlignment="Left">
                             <ComboBoxItem Content="ONegative" IsSelected="True"/>
                             <ComboBoxItem Content="OPositive" />
                             <ComboBoxItem Content="ANegative" />
@@ -72,22 +72,22 @@
 
                     <StackPanel Orientation="Vertical">
                         <Label Content="Address" HorizontalAlignment="Left"/>
-                        <TextBox x:Name="AddressTextBox" Width="150" HorizontalAlignment="Left"/>
+                    <TextBox IsReadOnly="True" x:Name="AddressTextBox" Width="150" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
                         <Label Content="Guardian Name" HorizontalAlignment="Left"/>
-                        <TextBox x:Name="GuardianNameTextBox" Width="150" HorizontalAlignment="Left" />
+                    <TextBox IsReadOnly="True" x:Name="GuardianNameTextBox" Width="150" HorizontalAlignment="Left" />
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
                         <Label Content="Date of Birth" HorizontalAlignment="Left"/>
-                        <DatePicker x:Name="DOBDatePicker" Width="150" HorizontalAlignment="Left" Height="35"/>
+                        <DatePicker IsEnabled="False" x:Name="DOBDatePicker" Width="150" HorizontalAlignment="Left" Height="35"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
                         <Label Content="Date of Admission" HorizontalAlignment="Left"/>
-                        <DatePicker x:Name="DOADatePicker" Width="150" HorizontalAlignment="Left" Height="35"/>
+                    <DatePicker IsEnabled="False" x:Name="DOADatePicker" Width="150" HorizontalAlignment="Left" Height="35"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
