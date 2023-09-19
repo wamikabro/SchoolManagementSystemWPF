@@ -12,7 +12,7 @@
 
             <!-- Labels and read-only text boxes -->
             <StackPanel Margin="10" Orientation="Horizontal">
-                <StackPanel>
+                <StackPanel Margin="20,0,0,0">
                     <StackPanel Orientation="Vertical">
                         <Label Content="First Name" HorizontalAlignment="Left"/>
                         <TextBox x:Name="FirstNameTextBox" HorizontalAlignment="Left" Width="150" IsReadOnly="True" />
@@ -92,7 +92,10 @@
                 </StackPanel>
             </StackPanel>
 
-            <!-- Okay button -->
-            <Button Content="Okay" Height="30" Width="120" HorizontalAlignment="Center" VerticalAlignment="bottom" Margin="0,0,0,5"/>
-        </Grid>
+            <!-- Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Content="Okay" Height="30" Width="120"   Margin="0,0,10,5"/>
+            <Button Content="Save" IsEnabled="False" Height="30" Width="120"   Margin="10,0,0,5"/>
+        </StackPanel>
+    </Grid>
 </UserControl>
