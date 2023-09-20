@@ -22,9 +22,13 @@ namespace SchoolManagementSystem.User_Controls
     /// </summary>
     public partial class StudentDetailsDialog : UserControl
     {
-        public StudentDetailsDialog()
+        // to hold the id of student whose details are being changed.
+        // the id will be set by SearchStudentUC because it knows what item was clicked.
+        int id;
+        public StudentDetailsDialog(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void EditLabel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -84,7 +84,7 @@ namespace SchoolManagementSystem.User_Controls
             {
 
                 // Create an instance of StudentDetailsDialog
-                StudentDetailsDialog studentDetailsDialog = new StudentDetailsDialog();
+                StudentDetailsDialog studentDetailsDialog = new StudentDetailsDialog((int)selectedItem["ID"]);
 
                 // Populate the UserControl's data elements with the selected data
                 studentDetailsDialog.FirstNameTextBox.Text = (string) selectedItem["FirstName"];
