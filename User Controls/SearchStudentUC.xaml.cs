@@ -51,6 +51,12 @@ namespace SchoolManagementSystem.User_Controls
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
+
+            FilterStudents();
+        }
+
+        public void FilterStudents()
+        {
             if (SearchTextBox.Text != String.Empty)
             {
                 filteredData = true;
@@ -72,7 +78,6 @@ namespace SchoolManagementSystem.User_Controls
                 filteredData = false;
                 LoadStudentDataGrid();
             }
-
         }
         private void StudentDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -169,6 +174,9 @@ namespace SchoolManagementSystem.User_Controls
         {
             // Refresh the student table
             LoadStudentDataGrid();
+
+            // Apply the filters if any
+            FilterStudents();
         }
 
     }
