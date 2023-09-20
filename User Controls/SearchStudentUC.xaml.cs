@@ -168,7 +168,7 @@ namespace SchoolManagementSystem.User_Controls
         private void StudentDetailsDialog_StudentUpdated(object sender, EventArgs e)
         {
             // Refresh the student table
-            
+            LoadStudentDataGrid();
         }
 
     }
