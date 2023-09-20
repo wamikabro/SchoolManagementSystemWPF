@@ -91,6 +91,9 @@ namespace SchoolManagementSystem.User_Controls
                 // Create an instance of StudentDetailsDialog
                 StudentDetailsDialog studentDetailsDialog = new StudentDetailsDialog((int)selectedItem["ID"]);
 
+                // Subscribing to the event
+                studentDetailsDialog.StudentUpdated += StudentDetailsDialog_StudentUpdated;
+
                 // Populate the UserControl's data elements with the selected data
                 studentDetailsDialog.FirstNameTextBox.Text = (string) selectedItem["FirstName"];
                 studentDetailsDialog.LastNameTextBox.Text = (string) selectedItem["LastName"];
@@ -163,8 +166,7 @@ namespace SchoolManagementSystem.User_Controls
                 };
                 dialogWindow.ShowDialog();
 
-                // Subscribing to the event
-                studentDetailsDialog.StudentUpdated += StudentDetailsDialog_StudentUpdated;
+
             }
         }
 
