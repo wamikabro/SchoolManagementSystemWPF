@@ -51,6 +51,12 @@ namespace SchoolManagementSystem.User_Controls
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
+            FilterStudent();
+
+        }
+
+        public void FilterStudent()
+        {
             if (SearchTextBox.Text != String.Empty)
             {
                 filteredData = true;
@@ -72,7 +78,6 @@ namespace SchoolManagementSystem.User_Controls
                 filteredData = false;
                 LoadStudentDataGrid();
             }
-
         }
 
         private void StudentDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -157,7 +162,19 @@ namespace SchoolManagementSystem.User_Controls
                     WindowStartupLocation = WindowStartupLocation.CenterScreen
                 };
                 dialogWindow.ShowDialog();
+
+                // Subscribing to the event
+                studentDetailsDialog.StudentUpdated += StudentDetailsDialog_StudentUpdated;
             }
         }
+
+        // Handle the event
+        private void StudentDetailsDialog_StudentUpdated(object sender, EventArgs e)
+        {
+            // Refresh the student table
+            // Refresh the DataGridView to reflect the filtered data
+            FilterStudent();
+        }
+
     }
 }
