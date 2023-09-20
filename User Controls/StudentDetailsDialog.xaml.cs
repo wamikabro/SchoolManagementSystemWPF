@@ -25,6 +25,10 @@ namespace SchoolManagementSystem.User_Controls
         // to hold the id of student whose details are being changed.
         // the id will be set by SearchStudentUC because it knows what item was clicked.
         int id;
+
+        // Define an event to notify of successful updates
+        public event EventHandler StudentUpdated;
+
         public StudentDetailsDialog(int id)
         {
             InitializeComponent();
@@ -107,12 +111,20 @@ namespace SchoolManagementSystem.User_Controls
                 // StudentDetailsDialog
                 student.UpdateStudent(id);
 
+                // Raise the event because setudent is successfully updated.
+                OnStudentUpdated(EventArgs.Empty);
             }
             catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message);
                 return;
             }
+        }
+
+        // event to be called on Student Updated Successfully
+        protected virtual void OnStudentUpdated(EventArgs e)
+        {
+            StudentUpdated?.Invoke(this, e);
         }
     }
 }
