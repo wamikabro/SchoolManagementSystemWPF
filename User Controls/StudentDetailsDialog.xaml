@@ -95,7 +95,7 @@
             <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <Button Content="Okay" Height="30" Width="120"   Margin="0,0,10,5"/>
-            <Button Name="SaveButton" Content="Save" IsEnabled="False" Height="30" Width="120"   Margin="10,0,0,5"/>
+            <Button Click="SaveButton_Click" Name="SaveButton" Content="Save" IsEnabled="False" Height="30" Width="120"   Margin="10,0,0,5"/>
         </StackPanel>
     </Grid>
 </UserControl>
