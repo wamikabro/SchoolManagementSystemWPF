@@ -103,6 +103,9 @@ namespace SchoolManagementSystem.User_Controls
                     phoneNumber, email, bloodGroup, address, guardianName, dateOfBirth,
                     dateOfAdmissions);
 
+                // send id that was recieved from SearchStudentUC while constructing
+                // StudentDetailsDialog
+                student.UpdateStudent(id);
 
             }
             catch (ArgumentException ex)

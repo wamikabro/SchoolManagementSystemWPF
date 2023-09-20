@@ -79,5 +79,57 @@ namespace SchoolManagementSystem.Functionality
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void UpdateStudent(int studentID)
+        {
+            try
+            {
+                // Store data in the Database
+                SqlCommand updateStudent = new SqlCommand(
+                    "UPDATE StudentTable SET " +
+                    "FirstName = @FirstName, " +
+                    "LastName = @LastName, " +
+                    "FatherName = @FatherName, " +
+                    "Gender = @Gender, " +
+                    "Grade = @Grade, " +
+                    "PhoneNumber = @PhoneNumber, " +
+                    "Email = @Email, " +
+                    "BloodGroup = @BloodGroup, " +
+                    "Address = @Address, " +
+                    "GuardianName = @GuardianName, " +
+                    "DateOfBirth = @DateOfBirth, " +
+                    "DateOfAdmissions = @DateOfAdmissions " +
+                    "WHERE ID = @ID", con);
+
+                // Command type
+                updateStudent.CommandType = CommandType.Text;
+
+                // Set parameters
+                updateStudent.Parameters.AddWithValue("@ID", studentID); // Provide the student's ID you want to update
+                updateStudent.Parameters.AddWithValue("@FirstName", firstName);
+                updateStudent.Parameters.AddWithValue("@LastName", lastName);
+                updateStudent.Parameters.AddWithValue("@FatherName", fatherName);
+                updateStudent.Parameters.AddWithValue("@Gender", gender.ToString());
+                updateStudent.Parameters.AddWithValue("@Grade", grade);
+                updateStudent.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                updateStudent.Parameters.AddWithValue("@Email", email);
+                updateStudent.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                updateStudent.Parameters.AddWithValue("@Address", address);
+                updateStudent.Parameters.AddWithValue("@GuardianName", guardianName);
+                updateStudent.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                updateStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+
+                con.Open();
+                updateStudent.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Student with ID " + studentID + " updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
