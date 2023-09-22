@@ -54,13 +54,28 @@ namespace SchoolManagementSystem.User_Controls
             if (SearchTextBox.Text != String.Empty)
             {
                 filteredData = true;
-                // Get the filter criteria from the search box
+
+                // Get the filter string
                 string filter = SearchTextBox.Text.ToLower();
 
-                dataTable.DefaultView.RowFilter = "FirstName LIKE '%" + filter +
+                // in case given filter is ID and check it against ID
+                int filterID = 0;
+                if (int.TryParse(SearchTextBox.Text, out int result))
+                    filterID = result;
+
+                // Initialize filter expressions for ID and string columns
+                string idFilterExpression = "ID = " + filterID;
+                string stringFilterExpression = "FirstName LIKE '%" + filter +
                     "%' OR LastName LIKE '%" + filter +
                     "%' OR FatherName LIKE '%" + filter +
                     "%' OR Email LIKE '%" + filter + "%'";
+
+                // Combine the filter expressions based on whether filterID is zero
+                string combinedFilterExpression = filterID != 0 ?
+                    "(" + idFilterExpression + ") OR (" + stringFilterExpression + ")" :
+                    stringFilterExpression;
+
+                dataTable.DefaultView.RowFilter = combinedFilterExpression;
 
                 // Refresh the DataGridView to reflect the filtered data
                 StaffDataGrid.ItemsSource = dataTable.DefaultView;
