@@ -8,7 +8,7 @@
              d:DesignHeight="400" d:DesignWidth="400">
     <Grid Background="{StaticResource BackgroundBrush}">
         <!-- Edit icon label in the top-right corner -->
-        <Label Content="Edit" MouseLeftButtonDown="EditLabel_MouseLeftButtonDown" Name="EditLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
+        <Label Content="Edit" MouseLeftButtonDown="EditLabel_MouseLeftButtonDown"  Name="EditLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
 
         <!-- Labels and read-only text boxes -->
         <StackPanel Margin="10" Orientation="Horizontal">
@@ -95,7 +95,7 @@
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <Button Content="Okay" Height="30" Width="120"   Margin="0,0,10,5"/>
-            <Button Name="SaveButton" Content="Save" IsEnabled="False" Height="30" Width="120"   Margin="10,0,0,5"/>
+            <Button Click="SaveButton_Click" Name="SaveButton" Content="Save" IsEnabled="False" Height="30" Width="120"   Margin="10,0,0,5"/>
         </StackPanel>
     </Grid>
 </UserControl>

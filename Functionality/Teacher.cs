@@ -80,5 +80,57 @@ namespace SchoolManagementSystem.Functionality
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void UpdateTeacher(int teacherID)
+        {
+            try
+            {
+                // Store data in the Database
+                SqlCommand updateTeacher = new SqlCommand(
+                    "UPDATE TeacherTable SET " +
+                    "FirstName = @FirstName, " +
+                    "LastName = @LastName, " +
+                    "FatherName = @FatherName, " +
+                    "Gender = @Gender, " +
+                    "Grade = @Grade, " +
+                    "PhoneNumber = @PhoneNumber, " +
+                    "Email = @Email, " +
+                    "BloodGroup = @BloodGroup, " +
+                    "Address = @Address, " +
+                    "Subject = @Subject, " +
+                    "DateOfBirth = @DateOfBirth, " +
+                    "DateOfAdmissions = @DateOfAdmissions " +
+                    "WHERE ID = @ID", con);
+
+                // Command type
+                updateTeacher.CommandType = CommandType.Text;
+
+                // Set parameters
+                updateTeacher.Parameters.AddWithValue("@ID", teacherID); // Provide the teacher's ID you want to update
+                updateTeacher.Parameters.AddWithValue("@FirstName", firstName);
+                updateTeacher.Parameters.AddWithValue("@LastName", lastName);
+                updateTeacher.Parameters.AddWithValue("@FatherName", fatherName);
+                updateTeacher.Parameters.AddWithValue("@Gender", gender.ToString());
+                updateTeacher.Parameters.AddWithValue("@Grade", grade);
+                updateTeacher.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                updateTeacher.Parameters.AddWithValue("@Email", email);
+                updateTeacher.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                updateTeacher.Parameters.AddWithValue("@Address", address);
+                updateTeacher.Parameters.AddWithValue("@Subject", subject);
+                updateTeacher.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                updateTeacher.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+
+                con.Open();
+                updateTeacher.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Teacher with ID " + teacherID + " updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
