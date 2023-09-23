@@ -66,10 +66,7 @@
                     <TextBox IsReadOnly="True" x:Name="AddressTextBox" Width="150" HorizontalAlignment="Left"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical">
-                    <Label Content="Subject" HorizontalAlignment="Left"/>
-                    <TextBox IsReadOnly="True" x:Name="SubjectTextBox" Width="150" HorizontalAlignment="Left" />
-                </StackPanel>
+                <StackPanel Orientation="Vertical"/>
 
                 <StackPanel Orientation="Vertical">
                     <Label Content="Date of Birth" HorizontalAlignment="Left"/>
