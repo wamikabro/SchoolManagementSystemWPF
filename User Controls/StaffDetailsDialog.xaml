@@ -8,7 +8,7 @@
              d:DesignHeight="400" d:DesignWidth="400">
     <Grid Background="{StaticResource BackgroundBrush}">
         <!-- Edit icon label in the top-right corner -->
-        <Label Content="Edit" Name="EditLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
+        <Label MouseLeftButtonDown="EditLabel_MouseLeftButtonDown" Content="Edit" Name="EditLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
 
         <!-- Labels and read-only text boxes -->
         <StackPanel Margin="10" Orientation="Horizontal">
