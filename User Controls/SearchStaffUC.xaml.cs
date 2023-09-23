@@ -51,6 +51,11 @@ namespace SchoolManagementSystem.User_Controls
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
+            FilterStaff();
+        }
+
+        public void FilterStaff()
+        {
             if (SearchTextBox.Text != String.Empty)
             {
                 filteredData = true;
@@ -86,6 +91,78 @@ namespace SchoolManagementSystem.User_Controls
                 filteredData = false;
                 LoadStaffDataGrid();
             }
+        }
+
+        private void StaffDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Get the selected item (row) when double-clicked
+            DataRowView selectedItem = (DataRowView)StaffDataGrid.SelectedItem;
+
+            if (selectedItem != null)
+            {
+
+                // Create an instance of StaffDetailsDialog
+                StaffDetailsDialog staffDetailsDialog = new StaffDetailsDialog((int)selectedItem["ID"]);
+
+                // Subscribing to the event
+                staffDetailsDialog.StaffUpdated += StaffDetailsDialog_StaffUpdated;
+
+                // Populate the UserControl's data elements with the selected data
+                staffDetailsDialog.FirstNameTextBox.Text = (string)selectedItem["FirstName"];
+                staffDetailsDialog.LastNameTextBox.Text = (string)selectedItem["LastName"];
+                staffDetailsDialog.FatherNameTextBox.Text = (string)selectedItem["FatherName"];
+                staffDetailsDialog.JobTitleTextBox.Text = (string)selectedItem["JobTitle"];
+                staffDetailsDialog.PhoneNumberTextBox.Text = (string)selectedItem["PhoneNumber"];
+                staffDetailsDialog.EmailTextBox.Text = (string)selectedItem["Email"];
+                
+                // Fetched BloodGroup and converted to ToString. 
+                // Checked one by one, and showed the one that matches.
+                string BloodGroupText = selectedItem["BloodGroup"].ToString();
+                if (BloodGroupText.Equals("ONegative"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 0;
+                else if (BloodGroupText.Equals("OPositive"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 1;
+                else if (BloodGroupText.Equals("ANegative"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 2;
+                else if (BloodGroupText.Equals("APositive"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 3;
+                else if (BloodGroupText.Equals("BNegative"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 4;
+                else if (BloodGroupText.Equals("BPositive"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 5;
+                else if (BloodGroupText.Equals("ABNegative"))
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 6;
+                else
+                    staffDetailsDialog.BloodGroupComboBox.SelectedIndex = 7;
+
+                staffDetailsDialog.AddressTextBox.Text = (string)selectedItem["Address"];
+                staffDetailsDialog.DOBDatePicker.SelectedDate = (DateTime)selectedItem["DateOfBirth"];
+                staffDetailsDialog.DOADatePicker.SelectedDate = (DateTime)selectedItem["DateOfAdmissions"];
+
+                // Create and show the dialog window
+                var dialogWindow = new Window
+                {
+                    Content = staffDetailsDialog,
+                    Title = "Student Details",
+                    Width = 400,
+                    Height = 450,
+                    ResizeMode = ResizeMode.NoResize,
+                    WindowStartupLocation = WindowStartupLocation.CenterScreen
+                };
+                dialogWindow.ShowDialog();
+
+
+            }
+        }
+
+        // Handle the event
+        private void StaffDetailsDialog_StaffUpdated(object sender, EventArgs e)
+        {
+            // Refresh the student table
+            LoadStaffDataGrid();
+
+            // Apply the filters if any
+            FilterStaff();
         }
     }
 }

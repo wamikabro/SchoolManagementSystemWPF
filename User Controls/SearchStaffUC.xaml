@@ -36,6 +36,6 @@
         </Border>
 
         <!-- Data Table -->
-        <DataGrid x:Name="StaffDataGrid" IsReadOnly="True"  AutoGenerateColumns="True" Margin="20,80,20,20"/>
+        <DataGrid MouseDoubleClick="StaffDataGrid_MouseDoubleClick" x:Name="StaffDataGrid" IsReadOnly="True"  AutoGenerateColumns="True" Margin="20,80,20,20"/>
     </Grid>
 </UserControl>

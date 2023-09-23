@@ -81,5 +81,55 @@ namespace SchoolManagementSystem.Functionality
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void UpdateStaff(int staffID)
+        {
+            try
+            {
+                // Store data in the Database
+                SqlCommand updateStaff = new SqlCommand(
+                    "UPDATE StaffTable SET " +
+                    "FirstName = @FirstName, " +
+                    "LastName = @LastName, " +
+                    "FatherName = @FatherName, " +
+                    "Gender = @Gender, " +
+                    "JobTitle = @JobTitle, " +
+                    "PhoneNumber = @PhoneNumber, " +
+                    "Email = @Email, " +
+                    "BloodGroup = @BloodGroup, " +
+                    "Address = @Address, " +
+                    "DateOfBirth = @DateOfBirth, " +
+                    "DateOfAdmissions = @DateOfAdmissions " +
+                    "WHERE ID = @ID", con);
+
+                // Command type
+                updateStaff.CommandType = CommandType.Text;
+
+                // Set parameters
+                updateStaff.Parameters.AddWithValue("@ID", staffID); // Provide the staff's ID you want to update
+                updateStaff.Parameters.AddWithValue("@FirstName", firstName);
+                updateStaff.Parameters.AddWithValue("@LastName", lastName);
+                updateStaff.Parameters.AddWithValue("@FatherName", fatherName);
+                updateStaff.Parameters.AddWithValue("@Gender", gender.ToString());
+                updateStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
+                updateStaff.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                updateStaff.Parameters.AddWithValue("@Email", email);
+                updateStaff.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                updateStaff.Parameters.AddWithValue("@Address", address);
+                updateStaff.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                updateStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+
+                con.Open();
+                updateStaff.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Staff with ID " + staffID + " updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

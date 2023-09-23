@@ -147,6 +147,9 @@
     <Compile Include="User Controls\SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\StaffDetailsDialog.xaml.cs">
+      <DependentUpon>StaffDetailsDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\StudentDetailsDialog.xaml.cs">
       <DependentUpon>StudentDetailsDialog.xaml</DependentUpon>
     </Compile>
@@ -234,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User Controls\SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\StaffDetailsDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
