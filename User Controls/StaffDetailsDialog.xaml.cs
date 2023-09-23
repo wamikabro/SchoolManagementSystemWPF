@@ -24,5 +24,21 @@ namespace SchoolManagementSystem.User_Controls
         {
             InitializeComponent();
         }
+
+        private void EditLabel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            FirstNameTextBox.IsReadOnly = false;
+            LastNameTextBox.IsReadOnly = false;
+            FatherNameTextBox.IsReadOnly = false;
+            GenderComboBox.IsEnabled = true;
+            JobTitleTextBox.IsReadOnly = false;
+            PhoneNumberTextBox.IsReadOnly = false;
+            EmailTextBox.IsReadOnly = false;
+            BloodGroupComboBox.IsEnabled = true;
+            AddressTextBox.IsReadOnly = false;
+            DOBDatePicker.IsEnabled = true;
+            DOADatePicker.IsEnabled = true;
+            SaveButton.IsEnabled = true;
+        }
     }
 }
