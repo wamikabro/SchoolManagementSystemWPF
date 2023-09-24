@@ -122,5 +122,10 @@ namespace SchoolManagementSystem.User_Controls
         {
             StaffUpdated?.Invoke(this, e);
         }
+
+        private void OkayButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window.GetWindow(this).Close();
+        }
     }
 }
