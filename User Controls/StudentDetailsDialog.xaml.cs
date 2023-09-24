@@ -132,13 +132,10 @@ namespace SchoolManagementSystem.User_Controls
 
         private void OkayButton_Click(object sender, RoutedEventArgs e)
         {
-            // Raise the OkayButtonClicked event when the "Okay" button is clicked
-            OnOkayButtonClicked(EventArgs.Empty);
-        }
 
-        protected virtual void OnOkayButtonClicked(EventArgs e)
-        {
-            OkayButtonClicked?.Invoke(this, e);
+            // Close the dialog window (the parent window that hosts this UserControl)
+            Window.GetWindow(this).Close();
+            
         }
 
 

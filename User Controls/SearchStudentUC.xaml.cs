@@ -110,9 +110,6 @@ namespace SchoolManagementSystem.User_Controls
 
                 // Subscribing to the event
                 studentDetailsDialog.StudentUpdated += StudentDetailsDialog_StudentUpdated;
-                
-                // subscribe to the event to tell when okay button is clicked.
-                studentDetailsDialog.OkayButtonClicked += StudentDetailsDialog_OkayButtonClicked;
 
                 // Populate the UserControl's data elements with the selected data
                 studentDetailsDialog.FirstNameTextBox.Text = (string) selectedItem["FirstName"];
@@ -202,11 +199,7 @@ namespace SchoolManagementSystem.User_Controls
         }
 
         
-        // Handle the event when the "Okay" button is clicked
-        private void StudentDetailsDialog_OkayButtonClicked(object sender, EventArgs e)
-        {
-            dialogWindow.Close();
-        }
+
 
     }
 }
