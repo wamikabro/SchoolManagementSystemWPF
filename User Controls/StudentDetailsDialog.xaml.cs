@@ -29,6 +29,9 @@ namespace SchoolManagementSystem.User_Controls
         // Define an event to notify of successful updates
         public event EventHandler StudentUpdated;
 
+        // Okay button has been clicked event
+        public event EventHandler OkayButtonClicked;
+
         public StudentDetailsDialog(int id)
         {
             InitializeComponent();
@@ -126,5 +129,18 @@ namespace SchoolManagementSystem.User_Controls
         {
             StudentUpdated?.Invoke(this, e);
         }
+
+        private void OkayButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Raise the OkayButtonClicked event when the "Okay" button is clicked
+            OnOkayButtonClicked(EventArgs.Empty);
+        }
+
+        protected virtual void OnOkayButtonClicked(EventArgs e)
+        {
+            OkayButtonClicked?.Invoke(this, e);
+        }
+
+
     }
 }
