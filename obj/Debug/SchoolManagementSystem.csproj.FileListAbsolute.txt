@@ -46,9 +46,6 @@ C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\FontAwesome.
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\bin\Debug\FontAwesome.WPF.xml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.SuggestedBindingRedirects.cache
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\ButtonStyles.baml
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\Colors.baml
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\GlobalStyles.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\Home.g.cs
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStaffUC.g.cs
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStudentUC.g.cs
