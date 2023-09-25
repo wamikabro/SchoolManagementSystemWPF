@@ -7,17 +7,7 @@
         xmlns:local="clr-namespace:SchoolManagementSystem"
         mc:Ignorable="d"
         Title="Home" Height="450" Width="800" WindowState="Maximized">
-    
-    <!-- Connecting Resources -->
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ResourceDictionaries/Colors.xaml"/>
-                <ResourceDictionary Source="ResourceDictionaries/ButtonStyles.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-
+  
     <Grid Background="{StaticResource BackgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
