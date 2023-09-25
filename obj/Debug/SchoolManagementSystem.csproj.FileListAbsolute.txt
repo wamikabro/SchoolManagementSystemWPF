@@ -62,7 +62,6 @@ C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Control
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\App.g.cs
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem_MarkupCompile.cache
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\SchoolManagementSystem_MarkupCompile.lref
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\App.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\Home.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStaffUC.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\AddStudentUC.baml
@@ -117,3 +116,5 @@ C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Control
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\TeacherDetailsDialog.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\StaffDetailsDialog.g.cs
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\StaffDetailsDialog.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\App.baml
+C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\LightTheme.baml
