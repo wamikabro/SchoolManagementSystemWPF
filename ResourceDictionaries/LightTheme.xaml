@@ -191,16 +191,26 @@
     <Style TargetType="Button">
         <Setter Property="Width" Value="120"/>
         <Setter Property="Height" Value="50"/>
+        <Setter Property="Background" Value="LightBlue"/>
+        <!-- Set the default background color -->
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="25" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                    <Border x:Name="ButtonBorder" CornerRadius="25" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Trigger for MouseOver state -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBorder" Property="Background" Value="LightSkyBlue"/>
+                            <!-- Set the hover background color -->
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
+
 
     <Style TargetType="ComboBox">
         <Setter Property="FontSize" Value="22"/>

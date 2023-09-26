@@ -115,4 +115,3 @@ C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Control
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\User Controls\StaffDetailsDialog.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\App.baml
 C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\LightTheme.baml
-C:\Users\INSPIRE COMP\source\repos\SchoolManagementSystem\obj\Debug\ResourceDictionaries\DarkTheme.baml
