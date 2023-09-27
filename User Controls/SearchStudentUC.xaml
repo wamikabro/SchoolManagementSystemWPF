@@ -18,9 +18,9 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="SearchTextBox" Panel.ZIndex="2" Background="Transparent" FontSize="20" Margin="10" VerticalAlignment="Center"/>
-                <Button Name="SearchButton" Click="SearchButton_Click"  Content="Search" Width="100" Height="30" Margin="10" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-                <Label Content="Search..." VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
+                <TextBox x:Name="SearchTextBox" Panel.ZIndex="2" Foreground="{DynamicResource searchBarTextColor}" Background="Transparent" FontSize="20" Margin="10" VerticalAlignment="Center"/>
+                <Button Name="SearchButton" Click="SearchButton_Click" Content="Search" Width="100" Height="30" Margin="10" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <Label Content="Search..." Foreground="{DynamicResource searchBarTextColor}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
                     <Label.Style>
                         <Style TargetType="Label">
                             <Setter Property="Visibility" Value="Collapsed"/>

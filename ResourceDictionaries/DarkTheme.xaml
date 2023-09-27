@@ -40,7 +40,12 @@
     <SolidColorBrush x:Key="panelOverColor" Color="#281269"/>
     <SolidColorBrush x:Key="panelActiveColor" Color="#2B1372"/>
 
-    <SolidColorBrush x:Key="searchBarColor" Color="#E0E0E0"/>
+    <!--Search Bar Color-->
+    <SolidColorBrush x:Key="searchBarColor" Color="#222222"/>
+    <SolidColorBrush x:Key="searchBarTextColor" Color="#E0E0E0"/>
+
+    <!--Menu Card Text Color-->
+    <SolidColorBrush x:Key="menuCardTextColor" Color="#000000"/>
 
     
     <Style x:Key="menuButton" TargetType="RadioButton">

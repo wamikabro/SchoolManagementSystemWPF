@@ -42,6 +42,7 @@
 
     <!--Search Bar Color-->
     <SolidColorBrush x:Key="searchBarColor" Color="#E0E0E0"/>
+    <SolidColorBrush x:Key="searchBarTextColor" Color="#222222"/>
 
     <!--Menu Card Text Color-->
     <SolidColorBrush x:Key="menuCardTextColor" Color="#FFFFFF"/>
