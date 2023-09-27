@@ -6,7 +6,7 @@
         <GradientStop Color="#26008F" Offset="1.3"/>
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="mainContentBackgroundColor" Color="black" Opacity="0.3"/>
+    <SolidColorBrush x:Key="mainContentBackgroundColor" Color="white" Opacity="0.3"/>
 
     <!--Background Colors-->
     <Color x:Key="primaryBackColor1">#78002E</Color>
@@ -48,7 +48,7 @@
         <Setter Property="Height" Value="50"/>
         <Setter Property="Margin" Value="-5,0,0,5"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{StaticResource plainTextColor3}"/>
+        <Setter Property="Foreground" Value="{DynamicResource plainTextColor3}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -65,15 +65,15 @@
             <!--Hover Over-->
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Margin" Value="0,0,0,5"/>
-                <Setter Property="Background" Value="{StaticResource panelOverColor}"/>
-                <Setter Property="Foreground" Value="{StaticResource titleColor3}"/>
+                <Setter Property="Background" Value="{DynamicResource panelOverColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource titleColor3}"/>
                 <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
 
             <!--Active Button-->
             <Trigger Property="IsChecked"  Value="True">
                 <Setter Property="Margin" Value="0,0,0,5"/>
-                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                <Setter Property="Background" Value="{DynamicResource panelActiveColor}"/>
                 <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
                 <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
@@ -103,7 +103,7 @@
         <!--Normal Button Style-->
         <Setter Property="Width" Value="35"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{StaticResource plainTextColor3}"/>
+        <Setter Property="Foreground" Value="{DynamicResource plainTextColor3}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -118,7 +118,7 @@
         <Style.Triggers>
             <!--Hover Over-->
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                <Setter Property="Background" Value="{DynamicResource panelActiveColor}"/>
                 <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
         </Style.Triggers>
@@ -139,7 +139,7 @@
         <Setter Property="Width" Value="25"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{StaticResource plainTextColor1}"/>
+        <Setter Property="Foreground" Value="{DynamicResource plainTextColor1}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -191,7 +191,7 @@
     <Style TargetType="Button">
         <Setter Property="Width" Value="120"/>
         <Setter Property="Height" Value="50"/>
-        <Setter Property="Background" Value="LightBlue"/>
+        <Setter Property="Background" Value="{DynamicResource color5}"/>
         <!-- Set the default background color -->
         <Setter Property="Template">
             <Setter.Value>
@@ -202,7 +202,12 @@
                     <ControlTemplate.Triggers>
                         <!-- Trigger for MouseOver state -->
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ButtonBorder" Property="Background" Value="LightSkyBlue"/>
+                            <Setter TargetName="ButtonBorder" Property="Background" Value="{DynamicResource color8}"/>
+                            <!-- Set the hover background color -->
+                        </Trigger>
+                        <!-- Trigger for MouseOver state -->
+                        <Trigger Property="IsPressed"  Value="True">
+                            <Setter TargetName="ButtonBorder" Property="Background" Value="{DynamicResource color2}"/>
                             <!-- Set the hover background color -->
                         </Trigger>
                     </ControlTemplate.Triggers>
