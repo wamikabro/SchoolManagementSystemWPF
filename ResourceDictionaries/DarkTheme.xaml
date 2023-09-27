@@ -44,6 +44,9 @@
     <SolidColorBrush x:Key="searchBarColor" Color="#222222"/>
     <SolidColorBrush x:Key="searchBarTextColor" Color="#E0E0E0"/>
 
+    <!--Data Table Color-->
+    <SolidColorBrush x:Key="dataTableBackground" Color="#222222"/>
+
     <!--Menu Card Text Color-->
     <SolidColorBrush x:Key="menuCardTextColor" Color="#000000"/>
 

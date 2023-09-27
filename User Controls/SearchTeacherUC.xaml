@@ -36,6 +36,6 @@
         </Border>
 
         <!-- Data Table -->
-        <DataGrid MouseDoubleClick="TeacherDataGrid_MouseDoubleClick" x:Name="TeacherDataGrid" IsReadOnly="True"  AutoGenerateColumns="True" Margin="20,80,20,20"/>
+        <DataGrid Background="{DynamicResource dataTableBackground}" MouseDoubleClick="TeacherDataGrid_MouseDoubleClick" x:Name="TeacherDataGrid" IsReadOnly="True"  AutoGenerateColumns="True" Margin="20,80,20,20"/>
     </Grid>
 </UserControl>
