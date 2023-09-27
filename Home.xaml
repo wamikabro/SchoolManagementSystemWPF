@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Home" Height="450" Width="800" WindowState="Maximized">
   
-    <Grid Background="{StaticResource BackgroundBrush}">
+    <Grid Background="{DynamicResource BackgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <!-- Sidebar -->
@@ -20,115 +20,115 @@
         <Border Grid.Column="0" Width="300">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                    <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
-                    <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
+                    <GradientStop Color="{DynamicResource secondaryBackColor1}" Offset="0"/>
+                    <GradientStop Color="{DynamicResource secondaryBackColor2}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
              <!--Menu Buttons-->
             <StackPanel>
                 <!-- Home -->
-                <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color1}"
+                <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color1}"
                                 IsChecked="True"
                                 Command="{Binding HomeViewCommand}"
                                 x:Name="homeButton"
                                 Click="homeButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                        <TextBlock Text="Home" Style="{StaticResource menuButtonText}"/>
+                        <fa:ImageAwesome Icon="Home" Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Home" Style="{DynamicResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
                 
                 <!-- Add New Button -->
-                <RadioButton x:Name="addNewButton" Style="{StaticResource menuButton}" Tag="{StaticResource color3}"
+                <RadioButton x:Name="addNewButton" Style="{DynamicResource menuButton}" Tag="{DynamicResource color3}"
                 Click="addNewButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:ImageAwesome Icon="Plus" Style="{StaticResource menuButtonIcon}"/>
-                        <TextBlock Text="Add New" Style="{StaticResource menuButtonText}"/>
+                        <fa:ImageAwesome Icon="Plus" Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Add New" Style="{DynamicResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
                 
                 <!-- Add Options: Visible when Add New Button clicked -->
                 <StackPanel x:Name="addButtonOptions" Visibility="Collapsed">
-                    <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color6}"
+                    <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color6}"
                                  x:Name="addStudentButton" Checked="addStudentButton_Checked"
                                  Click="addStudentButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="UserPlus" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Add Student" Style="{StaticResource menuButtonText}"/>
+                            <fa:ImageAwesome Icon="UserPlus" Style="{DynamicResource menuButtonIcon}"/>
+                            <TextBlock Text="Add Student" Style="{DynamicResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color6}"
+                    <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color6}"
                                  x:Name="addTeacherButton" Checked="addTeacherButton_Checked"
                                  Click="addTeacherButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="Clipboard" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Add Teacher" Style="{StaticResource menuButtonText}"/>
+                            <fa:ImageAwesome Icon="Clipboard" Style="{DynamicResource menuButtonIcon}"/>
+                            <TextBlock Text="Add Teacher" Style="{DynamicResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color6}"
+                    <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color6}"
                                  x:Name="addStaffButton" Checked="addStaffButton_Checked"
                                  Click="addStaffButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="UserCircle" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Add Staff" Style="{StaticResource menuButtonText}"/>
+                            <fa:ImageAwesome Icon="UserCircle" Style="{DynamicResource menuButtonIcon}"/>
+                            <TextBlock Text="Add Staff" Style="{DynamicResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>
 
                 <!-- Search Button -->
-                <RadioButton x:Name="searchButton" Style="{StaticResource menuButton}" Tag="{StaticResource color7}"
+                <RadioButton x:Name="searchButton" Style="{DynamicResource menuButton}" Tag="{DynamicResource color7}"
                              Click="searchButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:ImageAwesome Icon="Search" Style="{StaticResource menuButtonIcon}"/>
-                        <TextBlock Text="Search Existing" Style="{StaticResource menuButtonText}"/>
+                        <fa:ImageAwesome Icon="Search" Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Search Existing" Style="{DynamicResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
                 
                 <!-- Search Options: Visible when Search Button clicked -->
                 <StackPanel x:Name="searchButtonOptions" Visibility="Collapsed">
-                    <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color5}"
+                    <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color5}"
                                  x:Name="searchStudentButton" Checked="searchStudentButton_Checked"
                                  Click="searchStudentButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="UserPlus" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Search Student" Style="{StaticResource menuButtonText}"/>
+                            <fa:ImageAwesome Icon="UserPlus" Style="{DynamicResource menuButtonIcon}"/>
+                            <TextBlock Text="Search Student" Style="{DynamicResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color5}"
+                    <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color5}"
                                  x:Name="searchTeacherButton" Checked="searchTeacherButton_Checked"
                                  Click="searchTeacherButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="Clipboard" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Search Teacher" Style="{StaticResource menuButtonText}"/>
+                            <fa:ImageAwesome Icon="Clipboard" Style="{DynamicResource menuButtonIcon}"/>
+                            <TextBlock Text="Search Teacher" Style="{DynamicResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color5}"
+                    <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color5}"
                                  x:Name="searchStaffButton" Checked="searchStaffButton_Checked"
                                  Click="searchStaffButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="UserCircle" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Search Staff" Style="{StaticResource menuButtonText}"/>
+                            <fa:ImageAwesome Icon="UserCircle" Style="{DynamicResource menuButtonIcon}"/>
+                            <TextBlock Text="Search Staff" Style="{DynamicResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>
                 
                 <!-- Settings Button -->
-                <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color9}"
+                <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color9}"
                              x:Name="settingsButton"
                              Click="settingsButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:ImageAwesome Icon="Gear" Style="{StaticResource menuButtonIcon}"/>
-                        <TextBlock Text="Settings" Style="{StaticResource menuButtonText}"/>
+                        <fa:ImageAwesome Icon="Gear" Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Settings" Style="{DynamicResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
                 
                 <!-- Report Button -->
-                <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color4}"
+                <RadioButton Style="{DynamicResource menuButton}" Tag="{DynamicResource color4}"
                              x:Name="reportButton"
                              Click="reportButton_Click">
                     <StackPanel Orientation="Horizontal">
-                        <fa:ImageAwesome Icon="MailForward" Style="{StaticResource menuButtonIcon}"/>
-                        <TextBlock Text="Report" Style="{StaticResource menuButtonText}"/>
+                        <fa:ImageAwesome Icon="MailForward" Style="{DynamicResource menuButtonIcon}"/>
+                        <TextBlock Text="Report" Style="{DynamicResource menuButtonText}"/>
                     </StackPanel>
                 </RadioButton>
                 
@@ -137,7 +137,7 @@
 
 
         <!-- Main Content -->
-        <Border Grid.Column="1" Background="{StaticResource mainContentBackgroundColor}" Margin="30,34,30,26">
+        <Border Grid.Column="1" Background="{DynamicResource mainContentBackgroundColor}" Margin="30,34,30,26">
             <Border.CornerRadius>
                 <CornerRadius BottomLeft="15" BottomRight="15" TopLeft="15" TopRight="15"/>
             </Border.CornerRadius>

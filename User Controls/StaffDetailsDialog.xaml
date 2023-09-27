@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:SchoolManagementSystem.User_Controls"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
-    <Grid Background="{StaticResource BackgroundBrush}">
+    <Grid Background="{DynamicResource BackgroundBrush}">
         <!-- Edit icon label in the top-right corner -->
         <Label MouseLeftButtonDown="EditLabel_MouseLeftButtonDown" Content="Edit" Name="EditLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" Cursor="Hand"/>
 
