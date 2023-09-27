@@ -52,5 +52,27 @@ namespace SchoolManagementSystem.User_Controls
             updateFontSize.Parameters.AddWithValue("@NewFontSize", FontSizeSlider.Value);
             updateFontSize.ExecuteNonQuery();
         }
+
+        private void ThemeSwitch_Checked(object sender, RoutedEventArgs e)
+        {
+            ResourceDictionary darkTheme = new ResourceDictionary{
+                Source = new Uri("ResourceDictionaries/DarkTheme.xaml", UriKind.Relative)
+            };
+
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(darkTheme);
+        }
+
+        private void ThemeSwitch_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ResourceDictionary lightTheme = new ResourceDictionary
+            {
+                Source = new Uri("ResourceDictionaries/LightTheme.xaml", UriKind.Relative)
+            };
+
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(lightTheme);
+
+        }
     }
 }

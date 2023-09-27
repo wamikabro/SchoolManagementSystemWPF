@@ -14,7 +14,7 @@
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label Content="Theme" FontWeight="Bold" Margin="0,30,190,0"/>
-                <CheckBox FontSize="26" Margin="0,30,0,0"/>
+                <CheckBox Unchecked="ThemeSwitch_Unchecked" Checked="ThemeSwitch_Checked"  Name="ThemeSwitch" FontSize="26" Margin="0,30,0,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Label Content="Font Size" FontWeight="Bold" Margin="0,20,30,0"/>
