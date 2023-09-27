@@ -42,7 +42,7 @@
 
     <SolidColorBrush x:Key="searchBarColor" Color="#E0E0E0"/>
 
-
+    
     <Style x:Key="menuButton" TargetType="RadioButton">
         <!--Normal Button Style-->
         <Setter Property="Height" Value="50"/>
