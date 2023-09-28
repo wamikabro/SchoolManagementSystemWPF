@@ -22,12 +22,13 @@
     <SolidColorBrush x:Key="color2" Color="#C5C5FF"/>
     <SolidColorBrush x:Key="color3" Color="#C5FFFF"/>
     <SolidColorBrush x:Key="color4" Color="#FFB2C6"/>
-    <SolidColorBrush x:Key="color5" Color="#C5C5FF"/>
+    <SolidColorBrush x:Key="color5" Color="#A5A5FF"/>
     <SolidColorBrush x:Key="color6" Color="#FFFFC5"/>
     <SolidColorBrush x:Key="color7" Color="#FFC5C5"/>
-    <SolidColorBrush x:Key="color8" Color="#C5C5FF"/>
+    <SolidColorBrush x:Key="color8" Color="#C5D2FF"/>
     <SolidColorBrush x:Key="color9" Color="#C5FFD2"/>
     <SolidColorBrush x:Key="color10" Color="#FFC5D2"/>
+
     <!--Font Colors-->
     <SolidColorBrush x:Key="titleColor1" Color="#E0E1F1"/>
     <SolidColorBrush x:Key="titleColor2" Color="#D5CFF5"/>
