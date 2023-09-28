@@ -41,6 +41,8 @@ namespace SchoolManagementSystem.User_Controls
 
             FontSizeSlider.Value = reader.GetInt32(0);
 
+            SetThemeSwitchState();
+
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -73,6 +75,13 @@ namespace SchoolManagementSystem.User_Controls
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(lightTheme);
 
+        }
+
+        private void SetThemeSwitchState()
+        {
+            ThemeSwitch.IsChecked = Application.Current.Resources.MergedDictionaries
+                .Any(dictionary =>
+                    dictionary.Source != null && dictionary.Source.OriginalString == "ResourceDictionaries/DarkTheme.xaml");
         }
     }
 }
