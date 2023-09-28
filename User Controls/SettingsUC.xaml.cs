@@ -53,6 +53,10 @@ namespace SchoolManagementSystem.User_Controls
             SqlCommand updateFontSize = new SqlCommand("UPDATE Settings SET FontSize = @NewFontSize", con);
             updateFontSize.Parameters.AddWithValue("@NewFontSize", FontSizeSlider.Value);
             updateFontSize.ExecuteNonQuery();
+
+            SqlCommand updateThemeSwitch = new SqlCommand("UPDATE Settings SET ThemeSwitch = @NewThemeSwitch", con);
+            updateThemeSwitch.Parameters.AddWithValue("NewThemeSwitch", ThemeSwitch.IsChecked);
+            updateThemeSwitch.ExecuteNonQuery();
         }
 
         private void ThemeSwitch_Checked(object sender, RoutedEventArgs e)
