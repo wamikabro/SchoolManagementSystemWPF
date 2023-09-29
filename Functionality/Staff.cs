@@ -47,29 +47,29 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                // Store data in the Database
-                SqlCommand storeStaff = new
-                    SqlCommand("INSERT INTO StaffTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @PhoneNumber, @Address ,@Email, @BloodGroup, @DateOfBirth, @DateOfAdmissions, @JobTitle)", con);
-                // command type
-                storeStaff.CommandType = CommandType.Text;
+                using (SqlConnection connection = App.Instance.connection)
+                {
+                    // Store data in the Database
+                    SqlCommand storeStaff = new
+                    SqlCommand("INSERT INTO StaffTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @PhoneNumber, @Address ,@Email, @BloodGroup, @DateOfBirth, @DateOfAdmissions, @JobTitle)", connection);
+                    // command type
+                    storeStaff.CommandType = CommandType.Text;
 
-                // placement
-                storeStaff.Parameters.AddWithValue("@FirstName", firstName);
-                storeStaff.Parameters.AddWithValue("@LastName", lastName);
-                storeStaff.Parameters.AddWithValue("@FatherName", fatherName);
-                storeStaff.Parameters.AddWithValue("@Gender", gender.ToString());
-                storeStaff.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                storeStaff.Parameters.AddWithValue("@Address", address);
-                storeStaff.Parameters.AddWithValue("@Email", email);
-                storeStaff.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
-                storeStaff.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                storeStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
-                storeStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
+                    // placement
+                    storeStaff.Parameters.AddWithValue("@FirstName", firstName);
+                    storeStaff.Parameters.AddWithValue("@LastName", lastName);
+                    storeStaff.Parameters.AddWithValue("@FatherName", fatherName);
+                    storeStaff.Parameters.AddWithValue("@Gender", gender.ToString());
+                    storeStaff.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    storeStaff.Parameters.AddWithValue("@Address", address);
+                    storeStaff.Parameters.AddWithValue("@Email", email);
+                    storeStaff.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                    storeStaff.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                    storeStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+                    storeStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
 
-
-                con.Open();
-                storeStaff.ExecuteNonQuery();
-                con.Close();
+                    storeStaff.ExecuteNonQuery();
+                }
 
                 MessageBox.Show(jobTitle + " Called \"" +
                firstName + " " +
@@ -86,8 +86,10 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                // Store data in the Database
-                SqlCommand updateStaff = new SqlCommand(
+                using (SqlConnection connection = App.Instance.connection)
+                {
+                    // Store data in the Database
+                    SqlCommand updateStaff = new SqlCommand(
                     "UPDATE StaffTable SET " +
                     "FirstName = @FirstName, " +
                     "LastName = @LastName, " +
@@ -100,29 +102,27 @@ namespace SchoolManagementSystem.Functionality
                     "Address = @Address, " +
                     "DateOfBirth = @DateOfBirth, " +
                     "DateOfAdmissions = @DateOfAdmissions " +
-                    "WHERE ID = @ID", con);
+                    "WHERE ID = @ID", connection);
 
-                // Command type
-                updateStaff.CommandType = CommandType.Text;
+                    // Command type
+                    updateStaff.CommandType = CommandType.Text;
 
-                // Set parameters
-                updateStaff.Parameters.AddWithValue("@ID", staffID); // Provide the staff's ID you want to update
-                updateStaff.Parameters.AddWithValue("@FirstName", firstName);
-                updateStaff.Parameters.AddWithValue("@LastName", lastName);
-                updateStaff.Parameters.AddWithValue("@FatherName", fatherName);
-                updateStaff.Parameters.AddWithValue("@Gender", gender.ToString());
-                updateStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
-                updateStaff.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                updateStaff.Parameters.AddWithValue("@Email", email);
-                updateStaff.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
-                updateStaff.Parameters.AddWithValue("@Address", address);
-                updateStaff.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                updateStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+                    // Set parameters
+                    updateStaff.Parameters.AddWithValue("@ID", staffID); // Provide the staff's ID you want to update
+                    updateStaff.Parameters.AddWithValue("@FirstName", firstName);
+                    updateStaff.Parameters.AddWithValue("@LastName", lastName);
+                    updateStaff.Parameters.AddWithValue("@FatherName", fatherName);
+                    updateStaff.Parameters.AddWithValue("@Gender", gender.ToString());
+                    updateStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
+                    updateStaff.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    updateStaff.Parameters.AddWithValue("@Email", email);
+                    updateStaff.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                    updateStaff.Parameters.AddWithValue("@Address", address);
+                    updateStaff.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                    updateStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
 
-                con.Open();
-                updateStaff.ExecuteNonQuery();
-                con.Close();
-
+                    updateStaff.ExecuteNonQuery();
+                }    
                 MessageBox.Show("Staff with ID " + staffID + " updated successfully.");
             }
             catch (Exception ex)

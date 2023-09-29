@@ -15,17 +15,42 @@ namespace SchoolManagementSystem
     /// </summary>
     public partial class App : Application
     {
-        // SQL Connection
-        protected SqlConnection con;
+        public SqlConnection connection { get; private set; }
+
+        private static App _instance;
+
+        public static App Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new App();
+                    _instance.InitializeDatabaseConnection();
+                }
+                return _instance;
+            }
+        }
+        private void InitializeDatabaseConnection()
+        {
+            connection = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+        }
+
+        private App()
+        {
+            // Initialize the database connection so that the code inside App can also find the connection string.
+            InitializeDatabaseConnection();
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
-            con.Open();
+            // We can not use "using" here since for that we will have to call app instance but it will break the code.
+            connection.Open();
 
             SqlCommand themeSwitchDatabase = new
-                SqlCommand("SELECT ThemeSwitch from Settings", con);
+                    SqlCommand("SELECT ThemeSwitch from Settings", connection);
             SqlDataReader reader = themeSwitchDatabase.ExecuteReader();
             reader.Read();
 
@@ -41,7 +66,7 @@ namespace SchoolManagementSystem
 
                 // apply dark theme
                 Application.Current.Resources.MergedDictionaries.Add(darkTheme);
-            } 
+            }
             else // otherwise apply light theme if the answer if 0. In other words, if the last time switch state was stored as 0
             {
                 ResourceDictionary lightTheme = new ResourceDictionary
@@ -52,6 +77,7 @@ namespace SchoolManagementSystem
                 // apply dark theme
                 Application.Current.Resources.MergedDictionaries.Add(lightTheme);
             }
+            connection.Close();
         }
     }
 }

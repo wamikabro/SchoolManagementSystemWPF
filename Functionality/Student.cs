@@ -43,31 +43,29 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                // Store data in the Database
-                SqlCommand storeStudent = new
-                    SqlCommand("INSERT INTO StudentTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @Grade, @PhoneNumber, @Email, @BloodGroup, @Address, @GuardianName, @DateOfBirth, @DateOfAdmissions)", con);
-                // command type
-                storeStudent.CommandType = CommandType.Text;
+                using (SqlConnection connection = App.Instance.connection)
+                {
+                    // Store data in the Database
+                    SqlCommand storeStudent = new
+                    SqlCommand("INSERT INTO StudentTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @Grade, @PhoneNumber, @Email, @BloodGroup, @Address, @GuardianName, @DateOfBirth, @DateOfAdmissions)", connection);
+                    // command type
+                    storeStudent.CommandType = CommandType.Text;
+                    // placement
+                    storeStudent.Parameters.AddWithValue("@FirstName", firstName);
+                    storeStudent.Parameters.AddWithValue("@LastName", lastName);
+                    storeStudent.Parameters.AddWithValue("@FatherName", fatherName);
+                    storeStudent.Parameters.AddWithValue("@Gender", gender.ToString());
+                    storeStudent.Parameters.AddWithValue("@Grade", grade);
+                    storeStudent.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    storeStudent.Parameters.AddWithValue("@Email", email);
+                    storeStudent.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                    storeStudent.Parameters.AddWithValue("@Address", address);
+                    storeStudent.Parameters.AddWithValue("@GuardianName", guardianName);
+                    storeStudent.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                    storeStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
 
-                // placement
-                storeStudent.Parameters.AddWithValue("@FirstName", firstName);
-                storeStudent.Parameters.AddWithValue("@LastName", lastName);
-                storeStudent.Parameters.AddWithValue("@FatherName", fatherName);
-                storeStudent.Parameters.AddWithValue("@Gender", gender.ToString());
-                storeStudent.Parameters.AddWithValue("@Grade", grade);
-                storeStudent.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                storeStudent.Parameters.AddWithValue("@Email", email);
-                storeStudent.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
-                storeStudent.Parameters.AddWithValue("@Address", address);
-                storeStudent.Parameters.AddWithValue("@GuardianName", guardianName);
-                storeStudent.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                storeStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
-
-
-
-                con.Open();
-                storeStudent.ExecuteNonQuery();
-                con.Close();
+                    storeStudent.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("Student Called \"" + 
                     firstName + " " + 
@@ -84,45 +82,47 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                // Store data in the Database
-                SqlCommand updateStudent = new SqlCommand(
-                    "UPDATE StudentTable SET " +
-                    "FirstName = @FirstName, " +
-                    "LastName = @LastName, " +
-                    "FatherName = @FatherName, " +
-                    "Gender = @Gender, " +
-                    "Grade = @Grade, " +
-                    "PhoneNumber = @PhoneNumber, " +
-                    "Email = @Email, " +
-                    "BloodGroup = @BloodGroup, " +
-                    "Address = @Address, " +
-                    "GuardianName = @GuardianName, " +
-                    "DateOfBirth = @DateOfBirth, " +
-                    "DateOfAdmissions = @DateOfAdmissions " +
-                    "WHERE ID = @ID", con);
+                using(SqlConnection connection = App.Instance.connection)
+                {
+                    // Store data in the Database
+                    SqlCommand updateStudent = new SqlCommand(
+                        "UPDATE StudentTable SET " +
+                        "FirstName = @FirstName, " +
+                        "LastName = @LastName, " +
+                        "FatherName = @FatherName, " +
+                        "Gender = @Gender, " +
+                        "Grade = @Grade, " +
+                        "PhoneNumber = @PhoneNumber, " +
+                        "Email = @Email, " +
+                        "BloodGroup = @BloodGroup, " +
+                        "Address = @Address, " +
+                        "GuardianName = @GuardianName, " +
+                        "DateOfBirth = @DateOfBirth, " +
+                        "DateOfAdmissions = @DateOfAdmissions " +
+                        "WHERE ID = @ID", connection);
 
-                // Command type
-                updateStudent.CommandType = CommandType.Text;
+                    // Command type
+                    updateStudent.CommandType = CommandType.Text;
 
-                // Set parameters
-                updateStudent.Parameters.AddWithValue("@ID", studentID); // Provide the student's ID you want to update
-                updateStudent.Parameters.AddWithValue("@FirstName", firstName);
-                updateStudent.Parameters.AddWithValue("@LastName", lastName);
-                updateStudent.Parameters.AddWithValue("@FatherName", fatherName);
-                updateStudent.Parameters.AddWithValue("@Gender", gender.ToString());
-                updateStudent.Parameters.AddWithValue("@Grade", grade);
-                updateStudent.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                updateStudent.Parameters.AddWithValue("@Email", email);
-                updateStudent.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
-                updateStudent.Parameters.AddWithValue("@Address", address);
-                updateStudent.Parameters.AddWithValue("@GuardianName", guardianName);
-                updateStudent.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                updateStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
+                    // Set parameters
+                    updateStudent.Parameters.AddWithValue("@ID", studentID); // Provide the student's ID you want to update
+                    updateStudent.Parameters.AddWithValue("@FirstName", firstName);
+                    updateStudent.Parameters.AddWithValue("@LastName", lastName);
+                    updateStudent.Parameters.AddWithValue("@FatherName", fatherName);
+                    updateStudent.Parameters.AddWithValue("@Gender", gender.ToString());
+                    updateStudent.Parameters.AddWithValue("@Grade", grade);
+                    updateStudent.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    updateStudent.Parameters.AddWithValue("@Email", email);
+                    updateStudent.Parameters.AddWithValue("@BloodGroup", bloodGroup.ToString());
+                    updateStudent.Parameters.AddWithValue("@Address", address);
+                    updateStudent.Parameters.AddWithValue("@GuardianName", guardianName);
+                    updateStudent.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                    updateStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
 
-                con.Open();
-                updateStudent.ExecuteNonQuery();
-                con.Close();
 
+                    updateStudent.ExecuteNonQuery();
+                }
+                
                 MessageBox.Show("Student with ID " + studentID + " updated successfully.");
             }
             catch (Exception ex)

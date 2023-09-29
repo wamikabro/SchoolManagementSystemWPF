@@ -10,8 +10,7 @@ namespace SchoolManagementSystem.Functionality
 {
     abstract public class Person
     {
-        // SQL Connection
-        protected SqlConnection con;
+
 
         // All these values will be used by Student and Teacher Object
         protected string firstName;
@@ -213,7 +212,7 @@ namespace SchoolManagementSystem.Functionality
         // For those who has nohing to do with grades (classes) eg. Staff
         public Person(string firstName, string lastName, string fatherName, Gender gender, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
         {
-            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+            
             FirstName = firstName;
             LastName = lastName;
             FatherName = fatherName;
@@ -229,7 +228,7 @@ namespace SchoolManagementSystem.Functionality
         // In case full information was given
         public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
         {
-            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+            
             FirstName = firstName;
             LastName = lastName;
             FatherName = fatherName;
