@@ -29,9 +29,6 @@ namespace SchoolManagementSystem.User_Controls
         // Define an event to notify of successful updates
         public event EventHandler StudentUpdated;
 
-        // Okay button has been clicked event
-        public event EventHandler OkayButtonClicked;
-
         public StudentDetailsDialog(int id)
         {
             InitializeComponent();
