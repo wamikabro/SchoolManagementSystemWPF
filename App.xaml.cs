@@ -16,35 +16,11 @@ namespace SchoolManagementSystem
     public partial class App : Application
     {
         public SqlConnection connection { get; private set; }
-
-        private static App _instance;
-
-        public static App Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new App();
-                    _instance.InitializeDatabaseConnection();
-                }
-                return _instance;
-            }
-        }
-        private void InitializeDatabaseConnection()
-        {
-            connection = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
-        }
-
-        private App()
-        {
-            // Initialize the database connection so that the code inside App can also find the connection string.
-            InitializeDatabaseConnection();
-        }
-
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            connection = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
 
             // We can not use "using" here since for that we will have to call app instance but it will break the code.
             connection.Open();

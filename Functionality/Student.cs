@@ -43,8 +43,9 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = App.Instance.connection)
+                using (SqlConnection connection = ((App)Application.Current).connection)
                 {
+                    connection.Open();
                     // Store data in the Database
                     SqlCommand storeStudent = new
                     SqlCommand("INSERT INTO StudentTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @Grade, @PhoneNumber, @Email, @BloodGroup, @Address, @GuardianName, @DateOfBirth, @DateOfAdmissions)", connection);
@@ -65,6 +66,8 @@ namespace SchoolManagementSystem.Functionality
                     storeStudent.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
 
                     storeStudent.ExecuteNonQuery();
+                    
+                    connection.Close();
                 }
 
                 MessageBox.Show("Student Called \"" + 
@@ -82,7 +85,7 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using(SqlConnection connection = App.Instance.connection)
+                using(SqlConnection connection = ((App)Application.Current).connection)
                 {
                     // Store data in the Database
                     SqlCommand updateStudent = new SqlCommand(

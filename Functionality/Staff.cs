@@ -47,8 +47,10 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = App.Instance.connection)
+                using (SqlConnection connection = ((App)Application.Current).connection)
                 {
+                    connection.Open();
+
                     // Store data in the Database
                     SqlCommand storeStaff = new
                     SqlCommand("INSERT INTO StaffTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @PhoneNumber, @Address ,@Email, @BloodGroup, @DateOfBirth, @DateOfAdmissions, @JobTitle)", connection);
@@ -69,6 +71,8 @@ namespace SchoolManagementSystem.Functionality
                     storeStaff.Parameters.AddWithValue("@JobTitle", jobTitle);
 
                     storeStaff.ExecuteNonQuery();
+
+                    connection.Close();
                 }
 
                 MessageBox.Show(jobTitle + " Called \"" +
@@ -86,8 +90,10 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = App.Instance.connection)
+                using (SqlConnection connection = ((App)Application.Current).connection)
                 {
+                    connection.Open();
+
                     // Store data in the Database
                     SqlCommand updateStaff = new SqlCommand(
                     "UPDATE StaffTable SET " +
@@ -122,6 +128,8 @@ namespace SchoolManagementSystem.Functionality
                     updateStaff.Parameters.AddWithValue("@DateOfAdmissions", dateOfAdmissions);
 
                     updateStaff.ExecuteNonQuery();
+
+                    connection.Close();
                 }    
                 MessageBox.Show("Staff with ID " + staffID + " updated successfully.");
             }

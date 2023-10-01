@@ -44,8 +44,9 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = App.Instance.connection)
+                using (SqlConnection connection = ((App)Application.Current).connection)
                 { 
+                    connection.Open();
                     // Store data in the Database
                     SqlCommand storeTeacher = new
                         SqlCommand("INSERT INTO TeacherTable VALUES (@FirstName, @LastName, @FatherName, @Gender, @Grade, @PhoneNumber, @Email, @BloodGroup, @Address, @Subject, @DateOfBirth, @DateOfAdmissions)", connection);
@@ -67,6 +68,8 @@ namespace SchoolManagementSystem.Functionality
                     storeTeacher.Parameters.AddWithValue("@Subject", subject);
 
                     storeTeacher.ExecuteNonQuery();
+
+                    connection.Close();
                 }
 
                 MessageBox.Show("Teacher Called \"" +
@@ -84,8 +87,9 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = App.Instance.connection)
+                using (SqlConnection connection = ((App)Application.Current).connection)
                 {
+                    connection.Open();
                     // Store data in the Database
                     SqlCommand updateTeacher = new SqlCommand(
                     "UPDATE TeacherTable SET " +
@@ -123,6 +127,8 @@ namespace SchoolManagementSystem.Functionality
 
 
                     updateTeacher.ExecuteNonQuery();
+
+                    connection.Close();
                 }
 
                 MessageBox.Show("Teacher with ID " + teacherID + " updated successfully.");
