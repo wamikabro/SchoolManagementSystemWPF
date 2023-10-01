@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using SchoolManagementSystem.Functionality.Enums;
 
 namespace SchoolManagementSystem.Functionality
 {
     abstract public class Person
     {
-
+        // to store database connection string
+        public string connectionString;
 
         // All these values will be used by Student and Teacher Object
         protected string firstName;
@@ -208,11 +211,17 @@ namespace SchoolManagementSystem.Functionality
             data given is filled, otherwise the exception will be thrown
             so default constructor will never be called*/
 
+        public Person()
+        {
+            // connection string
+            connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+        }
 
         // For those who has nohing to do with grades (classes) eg. Staff
         public Person(string firstName, string lastName, string fatherName, Gender gender, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
+            : this() // calling default constructor to constructor connectionString
         {
-            
+
             FirstName = firstName;
             LastName = lastName;
             FatherName = fatherName;
@@ -227,8 +236,9 @@ namespace SchoolManagementSystem.Functionality
 
         // In case full information was given
         public Person(string firstName, string lastName, string fatherName, Gender gender, int grade, string phoneNumber, string address, string email, BloodType bloodGroup, DateTime dateOfBirth, DateTime dateOfAdmissions)
+            : this() // calling default constructor to constructor connectionString
         {
-            
+
             FirstName = firstName;
             LastName = lastName;
             FatherName = fatherName;

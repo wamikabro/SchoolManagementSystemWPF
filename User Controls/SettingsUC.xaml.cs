@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,7 @@ namespace SchoolManagementSystem.User_Controls
         public SettingsUC()
         {
             InitializeComponent();
-            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString);
 
             con.Open();
 
@@ -43,11 +44,11 @@ namespace SchoolManagementSystem.User_Controls
 
             SetThemeSwitchState();
 
+            con.Close();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
             con.Open();
 
             SqlCommand updateFontSize = new SqlCommand("UPDATE Settings SET FontSize = @NewFontSize", con);
@@ -57,6 +58,8 @@ namespace SchoolManagementSystem.User_Controls
             SqlCommand updateThemeSwitch = new SqlCommand("UPDATE Settings SET ThemeSwitch = @NewThemeSwitch", con);
             updateThemeSwitch.Parameters.AddWithValue("NewThemeSwitch", ThemeSwitch.IsChecked);
             updateThemeSwitch.ExecuteNonQuery();
+
+            con.Close();
         }
 
         private void ThemeSwitch_Checked(object sender, RoutedEventArgs e)

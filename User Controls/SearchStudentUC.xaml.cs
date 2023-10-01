@@ -2,6 +2,7 @@
 using SchoolManagementSystem.Functionality.Enums;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace SchoolManagementSystem.User_Controls
         }
 
         // database connection 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString);
         
         public void LoadStudentDataGrid()
         {

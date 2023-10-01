@@ -16,11 +16,12 @@ namespace SchoolManagementSystem
     public partial class App : Application
     {
         public SqlConnection connection { get; private set; }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-            connection = new SqlConnection("Data Source=DESKTOP-RUINSQ2\\SQLEXPRESS;Initial Catalog=SchoolManagementSystem;Integrated Security=True");
+            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString);
 
             // We can not use "using" here since for that we will have to call app instance but it will break the code.
             connection.Open();

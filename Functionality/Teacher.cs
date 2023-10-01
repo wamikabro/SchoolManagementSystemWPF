@@ -44,7 +44,7 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = ((App)Application.Current).connection)
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 { 
                     connection.Open();
                     // Store data in the Database
@@ -87,7 +87,7 @@ namespace SchoolManagementSystem.Functionality
         {
             try
             {
-                using (SqlConnection connection = ((App)Application.Current).connection)
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     // Store data in the Database
