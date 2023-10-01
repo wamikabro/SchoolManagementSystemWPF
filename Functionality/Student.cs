@@ -87,6 +87,7 @@ namespace SchoolManagementSystem.Functionality
             {
                 using(SqlConnection connection = ((App)Application.Current).connection)
                 {
+                    connection.Open();
                     // Store data in the Database
                     SqlCommand updateStudent = new SqlCommand(
                         "UPDATE StudentTable SET " +
@@ -124,6 +125,7 @@ namespace SchoolManagementSystem.Functionality
 
 
                     updateStudent.ExecuteNonQuery();
+                    connection.Close();
                 }
                 
                 MessageBox.Show("Student with ID " + studentID + " updated successfully.");
